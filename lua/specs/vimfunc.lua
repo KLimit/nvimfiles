@@ -2,7 +2,8 @@
 return {
 	{
 		'windwp/nvim-autopairs',
-		lazy = false,
+		lazy = true,
+		event = 'VeryLazy',
 		config = function()
 			require('nvim-autopairs').setup({
 				check_ts = true,
@@ -13,14 +14,16 @@ return {
 	{
 		'kylechui/nvim-surround',
 		version = '*',
-		lazy = false,
+		lazy = true,
+		event = 'VeryLazy',
 		config = function()
 			require('nvim-surround').setup({})
 		end
 	},
 	{
 		'numToStr/Comment.nvim',
-		lazy = false,
+		lazy = true,
+		event = 'VeryLazy',
 		config = function()
 			require('Comment').setup()
 		end,
@@ -28,7 +31,8 @@ return {
 	},
 	{
 		'folke/which-key.nvim',
-		lazy = false,
+		lazy = true,
+		event = 'VeryLazy',
 		config = function()
 			require('which-key').setup {
 			}
@@ -36,7 +40,8 @@ return {
 	},
 	{
 		'chentoast/marks.nvim',
-		lazy = false,
+		lazy = true,
+		event = 'VeryLazy',
 		config = function()
 				require('marks').setup({
 				})
@@ -44,7 +49,8 @@ return {
 	},
 	{
 		'rmagatti/alternate-toggler',
-		lazy = false,
+		lazy = true,
+		event = 'VeryLazy',
 		config = function()
 			require('alternate-toggler').setup({
 				alternates = {
@@ -63,7 +69,8 @@ return {
 	},
 	{
 		'chrisgrieser/nvim-various-textobjs',
-		lazy = false,
+		lazy = true,
+		event = 'VeryLazy',
 		config = function()
 			require('various-textobjs').setup({
 				useDefaultKeymaps = true
@@ -72,7 +79,8 @@ return {
 	},
 	{
 		'ibhagwan/smartyank.nvim',
-		lazy = false,
+		lazy = true,
+		event = 'VeryLazy',
 		clipboard = {enabled = true},
 		tmux = {enabled = false},
 	},
@@ -107,7 +115,8 @@ return {
 	{
 		'mrjones2014/smart-splits.nvim',
 		disable = true,
-		lazy = false,
+		lazy = true,
+		event = 'VeryLazy',
 		config = function()
 			require('smart-splits').setup({
 				ignored_filetypes = {

@@ -33,17 +33,19 @@ return {
 	},
 	{
 		'nyngwang/murmur.lua',
-		lazy = false,
+		lazy = true,
+		event = 'VeryLazy',
 		config = function()
 			require('murmur').setup({})
-		end
+		end,
 	},
 	{
 		'asiryk/auto-hlsearch.nvim',
-		lazy = false,
+		lazy = true,
+		event = 'VeryLazy',
 		config = function()
 			require('auto-hlsearch').setup()
-		end
+		end,
 	},
 	{
 		'm00qek/baleia.nvim',
