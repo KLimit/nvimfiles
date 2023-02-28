@@ -69,6 +69,8 @@ set showtabline=1
 set textwidth=80
 set nofoldenable
 set termguicolors
+set cursorline
+set nocursorcolumn
 let g:netrw_banner = 0
 " statusline/tabline/winbar
 set laststatus=3

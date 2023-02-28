@@ -103,5 +103,30 @@ return {
 				end
 			})
 		end,
+	},
+	{
+		'mrjones2014/smart-splits.nvim',
+		disable = true,
+		lazy = false,
+		config = function()
+			require('smart-splits').setup({
+				ignored_filetypes = {
+					'nofile',
+					'quickfix',
+					'prompt',
+					'no-neck-pain',
+				},
+				tmux_integration = false,
+				disable_tmux_nav_when_zoomed = false,
+			})
+		end
+	},
+	{
+		'Tummetott/reticle.nvim',
+		lazy = true,
+		event = 'VeryLazy',
+		config = function()
+			require('reticle').setup()
+		end,
 	}
 }
