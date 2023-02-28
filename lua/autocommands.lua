@@ -1,0 +1,37 @@
+local api = vim.api
+-- lua script to which I will store all my autocommands
+-- There may still be autocommands elsewhere if it makes more sense to keep them
+-- there (plugin config, etc.)
+
+-- local readonly_less = api.nvim_create_augroup("ROLess", { clear = true })
+-- api.nvim_create_autocmd({"BufEnter"}, {
+-- 	group = readonly_less,
+-- 	pattern = "*.txt",
+-- 	callback = function()
+-- 		if vim.bo.filetype == 'help' then
+-- 			api.nvim_exec(':runtime! macros/less.vim', false)
+-- 		end
+-- 	end
+-- })
+
+-- local vertHelp = api.nvim_create_augroup("VerticalHelp", { clear = true })
+-- api.nvim_create_autocmd({"BufEnter"}, {
+-- 		pattern = "*.txt",
+-- 		callback = function()
+-- 			if vim.bo.filetype == 'help' then
+-- 				api.nvim_command('wincmd L')
+-- 			end
+-- 		end
+-- })
+-- local shenzhen = api.nvim_create_augroup('ShenzhenSolitaire', { clear = true })
+-- api.nvim_create_autocmd( {'BufNew'}, {
+-- 	group = shenzhen,
+-- 	pattern ='*',
+-- 	callback = function()
+-- 		print('in the autocmd')
+-- 		if vim.bo.filetype == 'shenzhen-solitaire' then
+-- 			api.nvim_command('IndentBlanklineDisable')
+-- 			vim.wo.colorcolumn = nil
+-- 		end
+-- 	end
+-- })
