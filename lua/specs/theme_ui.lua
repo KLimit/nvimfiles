@@ -1,43 +1,8 @@
 -- plugins that add to the UI or theme (including colorschemes)
 return {
 	{
-		'n1ghtmare/noirblaze-vim',
-		lazy = true,
-	},
-	{
-		'paulfrische/reddish.nvim',
-		lazy = true,
-	},
-	{
-		'jesseleite/nvim-noirbuddy',
-		lazy = true,
-		dependencies = {'tjdevries/colorbuddy.nvim', branch = 'dev'},
-		config = function()
-			require('noirbuddy').setup({
-				primary = 'crt-amber',
-			})
-		end,
-	},
-	{
-		'vim-scripts/ScrollColors',
-		lazy = true,
-		cmd = 'ScrollColors',
-	},
-	{
 		'nvim-tree/nvim-web-devicons',
 		lazy = true,
-	},
-	{
-		'rose-pine/neovim',
-		name = 'rose-pine',
-		lazy = true,
-	},
-	{
-		'wuelnerdotexe/vim-enfocado',
-		lazy = true,
-		config = function()
-			vim.g.enfocado_style = 'nature'
-		end,
 	},
 	{
 		-- filenames in upper-right corner of window
