@@ -2,6 +2,7 @@ scriptencoding utf-8
 " lua require('plugins')
 lua require('lazyplugins')
 lua require('autocommands')
+lua require('commands')
 " lua require('aerial')
 " high-level operational stuff
 let g:loaded_ruby_provider = 0
