@@ -11,7 +11,7 @@ return {
 				callback = function()
 					vim.cmd('IndentBlanklineDisable')
 					vim.opt_local.colorcolumn = ''
-					vim.keymap.set('n', ']]', 'ShenzhenSolitaireNextGame')
+					vim.keymap.set('n', ']]', ':ShenzhenSolitaireNextGame')
 					vim.cmd('NoNeckPain')
 				end
 				-- command = "IndentBlanklineDisable",
