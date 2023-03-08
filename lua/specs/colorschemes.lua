@@ -30,7 +30,7 @@ colorschemes = {
 	},
 	{
 		'wuelnerdotexe/vim-enfocado',
-		lazy = false,
+		lazy = true,
 		config = function()
 			vim.g.enfocado_style = 'neon'
 			vim.g.enfocado_plugins = {
@@ -48,7 +48,42 @@ colorschemes = {
 	{
 		'savq/melange-nvim',
 		lazy = true,
-	}
+	},
+	{
+		'olivercederborg/poimandres.nvim',
+		lazy = true,
+		config = function()
+			require('poimandres').setup({})
+		end,
+	},
+	{
+		'savq/melange-nvim',
+		lazy = true,
+	},
+	{
+		'fenetikm/falcon',
+		lazy = true,
+	},
+	{
+		'rebelot/kanagawa.nvim',
+		lazy = true,
+		config = function()
+			require('kanagawa').setup({})
+		end,
+	},
+	{
+		'ramojus/mellifluous.nvim',
+		lazy = true,
+		dependencies = 'rktjmp/lush.nvim',
+		config = function()
+			require('mellifluous').setup(P{})
+		end,
+	},
+	{
+		'bluz71/vim-moonfly-colors',
+		name = 'moonfly',
+		lazy = false,
+	},
 }
 -- for i, scheme in ipairs(colorschemes) do
 -- 	scheme.priority = 1000

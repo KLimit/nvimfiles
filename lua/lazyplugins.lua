@@ -28,7 +28,7 @@ require("lazy").setup(
 			lazy = true,
 		},
 		install = {
-			colorscheme = {'enfocado'},
+			colorscheme = {'moonfly'},
 		},
 		ui = {
 			size = { width = 0.95, height = 0.9 },

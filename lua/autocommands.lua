@@ -35,3 +35,12 @@ local api = vim.api
 -- 		end
 -- 	end
 -- })
+
+-- local pyskeleton = api.nvim_create_augroup("pyskeleton", { clear = true })
+-- api.nvim_create_autocmd( {'BufWriteNewFile'}, {
+-- 	group = pyskeleton,
+-- 	pattern = '*.py',
+-- 	callback = function()
+-- 		api.nvim_command('read')
+-- 	end,
+-- })

@@ -42,7 +42,7 @@ endif
 " appearance
 " colorscheme rose-pine
 " colorscheme oxocarbon
-colorscheme enfocado
+colorscheme moonfly
 "shell
 " more than just setting shell to pwsh -- see shell-powershell
 let &shell = executable('pwsh') ? 'pwsh' : 'powershell'
