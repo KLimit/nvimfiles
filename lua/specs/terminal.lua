@@ -14,8 +14,9 @@ return {
 		'boltlessengineer/bufterm.nvim',
 		lazy = true,
 		config = function()
-			require('bufterm').setuip({})
+			require('bufterm').setup({})
 		end,
+		cmd = {'BufTermEnter', 'BufTermPrev', 'BufTermNext', 'Terminal'},
+		-- event = 'VeryLazy',
 	},
-	cmd = {'BufTermEnter', 'BufTermPrev', 'BufTermNext', 'terminal'}
 }
