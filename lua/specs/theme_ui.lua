@@ -163,4 +163,9 @@ return {
 		lazy = true,
 		event = 'VeryLazy',
 	},
+	{
+		'm4xshen/smartcolumn.nvim',
+		event = 'VeryLazy',
+		opts = {scope = 'window'}
+	},
 }
