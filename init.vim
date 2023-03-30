@@ -56,6 +56,7 @@ set shellxquote=
 set belloff=all
 set number
 set relativenumber
+set numberwidth=3
 set nowrap
 set scrolloff=3
 set incsearch
