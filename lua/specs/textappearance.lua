@@ -3,7 +3,6 @@ return {
 	{
 		-- also used by zen-mode.nvim
 		'folke/twilight.nvim',
-		lazy = true,
 		config = function()
 			require('twilight').setup({})
 		end,
@@ -33,7 +32,6 @@ return {
 	},
 	{
 		'nyngwang/murmur.lua',
-		lazy = true,
 		event = 'VeryLazy',
 		config = function()
 			require('murmur').setup({})
@@ -41,7 +39,6 @@ return {
 	},
 	{
 		'asiryk/auto-hlsearch.nvim',
-		lazy = true,
 		event = 'VeryLazy',
 		config = function()
 			require('auto-hlsearch').setup()
@@ -49,6 +46,5 @@ return {
 	},
 	{
 		'm00qek/baleia.nvim',
-		lazy = true,
 	}
 }

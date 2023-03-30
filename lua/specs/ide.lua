@@ -80,7 +80,6 @@ return {
 	{
 		-- code tree
 		'stevearc/aerial.nvim',
-		lazy = true,
 		event = 'VeryLazy',
 		config = function()
 			require('aerial').setup({

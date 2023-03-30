@@ -2,7 +2,6 @@
 return {
 	{
 		'nvim-tree/nvim-web-devicons',
-		lazy = true,
 	},
 	{
 		-- filenames in upper-right corner of window
@@ -138,7 +137,6 @@ return {
 	},
 	{
 		'shortcuts/no-neck-pain.nvim',
-		lazy = true,
 		version = '*',
 		config = function()
 			require('no-neck-pain').setup({})
@@ -160,7 +158,6 @@ return {
 	},
 	{
 		'cpea2506/relative-toggle.nvim',
-		lazy = true,
 		event = 'VeryLazy',
 	},
 	{

@@ -2,7 +2,6 @@
 return {
 	{
 		'rktjmp/shenzhen-solitaire.nvim',
-		lazy = true,
 		config = function()
 			local Shenzhen = vim.api.nvim_create_augroup("Shenzhen", {clear = True})
 			vim.api.nvim_create_autocmd({'FileType'}, {
@@ -22,7 +21,6 @@ return {
 	{
 		'tamton-aquib/zone.nvim',
 		enabled = false,
-		lazy = true,
 		config = function()
 			require('zone').setup({
 				style = 'treadmill',
@@ -32,7 +30,6 @@ return {
 	},
 	{
 		'Eandrju/cellular-automaton.nvim',
-		lazy = true,
 		config = function()
 			vim.keymap.set('n', '<leader>fml', '<cmd>CellularAutomaton make_it_rain<CR>')
 		end,
@@ -41,7 +38,6 @@ return {
 	},
 	{
 		'tamton-aquib/duck.nvim',
-		lazy = true,
 		config = function()
 			local duck = require('duck')
 			vim.keymap.set('n', '<leader>kit', function() duck.hatch('🐈') end, {})

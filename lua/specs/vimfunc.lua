@@ -2,7 +2,6 @@
 return {
 	{
 		'windwp/nvim-autopairs',
-		lazy = true,
 		event = 'VeryLazy',
 		config = function()
 			require('nvim-autopairs').setup({
@@ -14,7 +13,6 @@ return {
 	{
 		'kylechui/nvim-surround',
 		version = '*',
-		lazy = true,
 		event = 'VeryLazy',
 		config = function()
 			require('nvim-surround').setup({})
@@ -22,7 +20,6 @@ return {
 	},
 	{
 		'numToStr/Comment.nvim',
-		lazy = true,
 		event = 'VeryLazy',
 		config = function()
 			require('Comment').setup()
@@ -31,7 +28,6 @@ return {
 	},
 	{
 		'folke/which-key.nvim',
-		lazy = true,
 		event = 'VeryLazy',
 		config = function()
 			require('which-key').setup {
@@ -40,7 +36,6 @@ return {
 	},
 	{
 		'chentoast/marks.nvim',
-		lazy = true,
 		event = 'VeryLazy',
 		config = function()
 				require('marks').setup({
@@ -49,7 +44,6 @@ return {
 	},
 	{
 		'rmagatti/alternate-toggler',
-		lazy = true,
 		event = 'VeryLazy',
 		config = function()
 			toggler = require('alternate-toggler')
@@ -63,7 +57,6 @@ return {
 	},
 	{
 		'matbme/JABS.nvim',
-		lazy = true,
 		config = function()
 			require('jabs').setup()
 		end,
@@ -71,7 +64,6 @@ return {
 	},
 	{
 		'chrisgrieser/nvim-various-textobjs',
-		lazy = true,
 		event = 'VeryLazy',
 		config = function()
 			require('various-textobjs').setup({
@@ -81,14 +73,12 @@ return {
 	},
 	{
 		'ibhagwan/smartyank.nvim',
-		lazy = true,
 		event = 'VeryLazy',
 		clipboard = {enabled = true},
 		tmux = {enabled = false},
 	},
 	{
 		'gaoDean/autolist.nvim',
-		lazy = true,
 		ft = {
 			'markdown',
 			'text',
@@ -117,7 +107,6 @@ return {
 	{
 		'mrjones2014/smart-splits.nvim',
 		disable = true,
-		lazy = true,
 		event = 'VeryLazy',
 		config = function()
 			require('smart-splits').setup({
@@ -134,7 +123,6 @@ return {
 	},
 	{
 		'Tummetott/reticle.nvim',
-		lazy = true,
 		event = 'VeryLazy',
 		config = function()
 			require('reticle').setup()
@@ -143,7 +131,6 @@ return {
 	{
 		'Wansmer/treesj',
 		dependencies = {'nvim-treesitter/nvim-treesitter'},
-		lazy = true,
 		cmd = {'TSJToggle', 'TSJSplit', 'TSJJoin'},
 		keys = {'<leader>j', '<leader>s'},
 		config = function()
@@ -157,17 +144,14 @@ return {
 	},
 	{
 		'vim-scripts/ScrollColors',
-		lazy = true,
 		cmd = {'SCROLL', 'COLOR'},
 	},
 	{
 		'jinfan/vim-randcolor',
-		lazy = true,
 		cmd = {'RandColorScheme'},
 	},
 	{
 		'chrisgrieser/nvim-spider',
-		lazy = true,
 		event = 'VeryLazy',
 		config = function()
 				vim.keymap.set(

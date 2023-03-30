@@ -12,7 +12,6 @@ return {
 	},
 	{
 		'boltlessengineer/bufterm.nvim',
-		lazy = true,
 		config = function()
 			require('bufterm').setup({})
 		end,
