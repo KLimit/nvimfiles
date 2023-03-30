@@ -101,7 +101,7 @@ nmap <F8> :AerialToggle!<CR>
 " nmap <F9> :ZenMode<CR>
 nmap <F9> :NoNeckPain<CR>
 nmap <F10> :lua require('codewindow').toggle_minimap()<CR>
-nmap <Leader>s :lua require('alternate-toggler').toggleAlternate()<CR>
+" nmap <Leader>s :lua require('alternate-toggler').toggleAlternate()<CR>
 " imap <C-e> <C-o>:BulletDemote<cr>
 
 " augroup Shenzhen

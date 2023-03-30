@@ -52,10 +52,12 @@ return {
 		lazy = true,
 		event = 'VeryLazy',
 		config = function()
-			require('alternate-toggler').setup({
+			toggler = require('alternate-toggler')
+			toggler.setup({
 				alternates = {
 					['=='] = '!='
 				},
+				vim.keymap.set('n', '<leader>t', toggler.toggleAlternate)
 			})
 		end,
 	},
@@ -137,5 +139,20 @@ return {
 		config = function()
 			require('reticle').setup()
 		end,
-	}
+	},
+	{
+		'Wansmer/treesj',
+		dependencies = {'nvim-treesitter/nvim-treesitter'},
+		lazy = true,
+		cmd = {'TSJToggle', 'TSJSplit', 'TSJJoin'},
+		keys = {'<leader>j', '<leader>s'},
+		config = function()
+			local treesj = require('treesj')
+			treesj.setup({
+				use_default_keymaps = false,
+			})
+			vim.keymap.set('n', '<leader>j', treesj.join)
+			vim.keymap.set('n', '<leader>s', treesj.split)
+		end,
+	},
 }
