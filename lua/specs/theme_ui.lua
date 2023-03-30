@@ -158,4 +158,9 @@ return {
 			)
 		end,
 	},
+	{
+		'cpea2506/relative-toggle.nvim',
+		lazy = true,
+		event = 'VeryLazy',
+	},
 }
