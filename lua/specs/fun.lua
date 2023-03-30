@@ -11,7 +11,7 @@ return {
 				callback = function()
 					vim.cmd('IndentBlanklineDisable')
 					vim.opt_local.colorcolumn = ''
-					vim.keymap.set('n', ']]', ':ShenzhenSolitaireNextGame<CR>')
+					vim.keymap.set('n', ']]', ':ShenzhenSolitaireNewGame<CR>')
 					vim.cmd('NoNeckPain')
 				end
 				-- command = "IndentBlanklineDisable",
@@ -36,6 +36,7 @@ return {
 		config = function()
 			vim.keymap.set('n', '<leader>fml', '<cmd>CellularAutomaton make_it_rain<CR>')
 		end,
+		cmd = 'CellularAutomaton',
 		keys = '<leader>fml',
 	},
 	{
