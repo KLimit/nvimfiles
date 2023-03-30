@@ -87,9 +87,7 @@ return {
 				layout = {
 					default_direction = 'prefer_left',
 				},
-				close_automatic_events = {
-						'unfocus',
-				}
+				close_automatic_events = {}
 			})
 		end,
 	},
