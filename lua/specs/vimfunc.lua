@@ -155,4 +155,14 @@ return {
 			vim.keymap.set('n', '<leader>s', treesj.split)
 		end,
 	},
+	{
+		'vim-scripts/ScrollColors',
+		lazy = true,
+		cmd = {'SCROLL', 'COLOR'},
+	},
+	{
+		'jinfan/vim-randcolor',
+		lazy = true,
+		cmd = {'RandColorScheme'},
+	},
 }

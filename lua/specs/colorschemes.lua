@@ -1,21 +1,9 @@
--- default color scheme should not be lazy
+-- color schemes only
 colorschemes = {
-	{
-		'vim-scripts/ScrollColors',
-		lazy = true,
-		cmd = {'SCROLL', 'COLOR'},
-	},
-	{
-		'n1ghtmare/noirblaze-vim',
-		lazy = true,
-	},
-	{
-		'paulfrische/reddish.nvim',
-		lazy = true,
-	},
+	{ 'n1ghtmare/noirblaze-vim' },
+	{ 'paulfrische/reddish.nvim' },
 	{
 		'jesseleite/nvim-noirbuddy',
-		lazy = true,
 		dependencies = {'tjdevries/colorbuddy.nvim', branch = 'dev'},
 		config = function()
 			require('noirbuddy').setup({
@@ -26,11 +14,9 @@ colorschemes = {
 	{
 		'rose-pine/neovim',
 		name = 'rose-pine',
-		lazy = true,
 	},
 	{
 		'wuelnerdotexe/vim-enfocado',
-		lazy = true,
 		config = function()
 			vim.g.enfocado_style = 'neon'
 			vim.g.enfocado_plugins = {
@@ -45,46 +31,46 @@ colorschemes = {
 			}
 		end,
 	},
-	{
-		'savq/melange-nvim',
-		lazy = true,
-	},
+	{ 'savq/melange-nvim' },
 	{
 		'olivercederborg/poimandres.nvim',
-		lazy = true,
 		config = function()
 			require('poimandres').setup({})
 		end,
 	},
-	{
-		'savq/melange-nvim',
-		lazy = true,
-	},
-	{
-		'fenetikm/falcon',
-		lazy = true,
-	},
+	{ 'savq/melange-nvim' },
+	{ 'fenetikm/falcon' },
 	{
 		'rebelot/kanagawa.nvim',
-		lazy = true,
 		config = function()
 			require('kanagawa').setup({})
 		end,
 	},
 	{
 		'ramojus/mellifluous.nvim',
-		lazy = true,
 		dependencies = 'rktjmp/lush.nvim',
 		config = function()
-			require('mellifluous').setup(P{})
+			require('mellifluous').setup({})
 		end,
 	},
 	{
 		'bluz71/vim-moonfly-colors',
 		name = 'moonfly',
-		lazy = false,
 	},
+	{ url = 'https://git.sr.ht/~romainl/vim-bruin' },
+	{ url = 'https://git.sr.ht/~swalladge/paper.vim' },
+	{ url = 'https://git.sr.ht/~swalladge/antarctic-vim' },
+	{ 'heraldofsolace/nisha-vim' },
+	{ 'aonemd/kuroi.vim' },
+	{ 'hachy/eva01.vim' },
+	{ 'rfunix/vim-greenisgood' },
+	{ 'm-gail/northernlights.vim' },
+	{ 'MeF0504/vim-shiki' },
 }
--- for i, scheme in ipairs(colorschemes) do
--- 	scheme.priority = 1000
+for i, scheme in ipairs(colorschemes) do
+	-- lazy.nvim recommends high priority for color schemes to load them early
+	scheme.priority = 1000
+	-- I profiled several times; it's cheap to not lazy-load these (~0.5ms)
+	scheme.lazy = false
+end
 return colorschemes
