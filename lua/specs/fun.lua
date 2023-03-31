@@ -46,4 +46,11 @@ return {
 		end,
 		keys = {'<leader>kit', '<leader>sus', '<leader>duckd'}
 	},
+	{
+		'jim-fx/sudoku.nvim',
+		cmd = 'Sudoku',
+		config = function()
+			require('sudoku').setup({})
+		end,
+	}
 }
