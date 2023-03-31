@@ -43,9 +43,15 @@ return {
 			require('lualine').setup({
 				options = {
 					globalstatus = true,
+					-- the font Fairfax HD has Powerline symbols at a different code point
+					section_separators = { left = '󿂰', right = '󿂲' },
 					component_separators = { left = '│', right = '│' },
 				},
 				sections = {
+					lualine_a = {
+						'buffers',
+						symbols = { modified = ' *', alternate_file = '#', directory = '🗁' }
+					},
 					lualine_b = {
 						{
 							function()
@@ -56,7 +62,7 @@ return {
 									return ''
 								end
 							end,
-							icon = '',
+							icon = '󿂠',
 						},
 						{
 							'diff',
@@ -75,6 +81,14 @@ return {
 					},
 					lualine_c = {
 						{'aerial', dense = true,},
+					},
+					lualine_x = {
+						'encoding',
+						{
+							'fileformat',
+							symbols = { unix = '␊', dos = '␍␊', mac = '␍' }
+						},
+						{'filetype', icons_enabled = false},
 					},
 					lualine_y = {
 						'location',
