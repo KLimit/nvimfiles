@@ -1,5 +1,4 @@
 scriptencoding utf-8
-" lua require('plugins')
 lua require('lazyplugins')
 lua require('autocommands')
 lua require('commands')
@@ -24,7 +23,8 @@ if &modifiable
 endif
 " gui (possibly neovide-specific)
 " set guifont=3270SemiNarrow\ NF:h10
-set guifont=Liga\ SFMono\ Nerd\ Font:h10
+" set guifont=Liga\ SFMono\ Nerd\ Font:h10
+set guifont=Fairfax\ Hax\ HD:h12
 
 if exists("g:neovide")
 	" let g:neovide_remember_window_size = v:true
@@ -32,13 +32,12 @@ if exists("g:neovide")
 	let g:neovide_cursor_animation_length=0.03
 	let g:neovide_cursor_trail_size = 0.6
 	let g:neovide_cursor_unfocused_outline_width = 0.06
-	let g:neovide_remember_window_size = v:true
+	let g:neovide_remember_window_size = v:false
 	let g:neovide_fullscreen = v:false
-	function! ToggleNeovideFullscreen()
-		" who knows if this is the best way to do this in vimscript
-		let g:neovide_fullscreen = !g:neovide_fullscreen
-	endfunction
-	nmap <F11> :call ToggleNeovideFullscreen() <CR>
+	let g:neovide_padding_top = 9
+	let g:neovide_padding_bottom = 9
+	let g:neovide_padding_right = 9
+	let g:neovide_padding_left = 9
 endif
 " appearance
 " colorscheme rose-pine
