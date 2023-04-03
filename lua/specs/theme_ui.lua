@@ -48,10 +48,10 @@ return {
 					component_separators = { left = '│', right = '│' },
 				},
 				sections = {
-					lualine_a = {
+					lualine_a = {{
 						'buffers',
 						symbols = { modified = ' *', alternate_file = '#', directory = '🗁' }
-					},
+					}},
 					lualine_b = {
 						{
 							function()
