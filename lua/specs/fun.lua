@@ -52,5 +52,15 @@ return {
 		config = function()
 			require('sudoku').setup({})
 		end,
-	}
+	},
+	{
+		'letieu/hacker.nvim',
+		cmd = { 'HackFollow', 'Hack' },
+		config = function()
+			require('hacker').setup({
+				filetype = 'python',
+				speed = { min = 1, max = 1},
+			})
+		end,
+	},
 }
