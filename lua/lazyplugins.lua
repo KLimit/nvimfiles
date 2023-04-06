@@ -28,13 +28,29 @@ require("lazy").setup(
 			lazy = true,
 		},
 		install = {
+			missing = false,
 			colorscheme = {'moonfly'},
 		},
 		ui = {
-			size = { width = 0.95, height = 0.9 },
+			size = { width = 0.9, height = 0.9 },
+			icons = {
+				cmd = "⌘",
+				config = "🔧",
+				event = "⏰",
+				ft = "🗁",
+				init = "⚙",
+				keys = "⌨",
+				plugin = "🔌",
+				runtime = "🖵",
+				source = "🗎",
+				start = "↳",
+				task = "📌",
+				lazy = "⏾",
+			},
 		},
 		config = {
 			checker = true,
+			concurrency = 3,
 		},
 	}
 )
