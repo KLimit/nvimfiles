@@ -22,7 +22,7 @@ return {
 	},
 	{
 		'tpope/vim-fugitive',
-		enabled = true,
+		enabled = false,
 		cmd = {
 				"G",
 				"Git",
@@ -92,5 +92,12 @@ return {
 				show_guides = true,
 			})
 		end,
+	},
+	{
+		'rhysd/committia.vim',
+		-- Lazy-loading does not work with this plugin
+		-- consider finding a different git plugin written in Lua
+		lazy = false,
+		ft = 'gitcommit',
 	},
 }
