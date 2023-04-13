@@ -95,9 +95,24 @@ return {
 	},
 	{
 		'rhysd/committia.vim',
+		enabled = false,
 		-- Lazy-loading does not work with this plugin
 		-- consider finding a different git plugin written in Lua
 		lazy = false,
 		ft = 'gitcommit',
+	},
+	{
+		'timuntersberger/neogit',
+		dependencies = 'nvim-lua/plenary.nvim',
+		config = function()
+			require('neogit').setup({
+				disable_commit_confirmation = true,
+				disable_insert_on_commit = false,
+				sections = {
+					untracked = { folded = true },
+				}
+			})
+		end,
+		cmd = 'Neogit',
 	},
 }

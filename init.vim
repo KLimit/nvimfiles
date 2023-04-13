@@ -95,7 +95,7 @@ if has('win32')
 endif
 let g:mapleader = ","
 nmap <F3> :JABSOpen<CR>
-nmap <F5> :tab G<CR>
+nmap <F5> :Neogit<CR>
 nmap <F8> :AerialToggle!<CR>
 " nmap <F9> :ZenMode<CR>
 nmap <F9> :NoNeckPain<CR>
