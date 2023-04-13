@@ -120,6 +120,7 @@ return {
 			local codewindow = require('codewindow')
 			codewindow.setup({
 				minimap_width = 10,
+				use_treesitter = true,
 			})
 			codewindow.apply_default_keybinds()
 		end,
