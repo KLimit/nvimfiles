@@ -16,7 +16,8 @@ return {
 					if a.nvim_buf_get_option(props.buf, 'modified') then
 						res = res .. ' [+]'
 					end
-					res = a.nvim_win_get_number(props.win) .. ' | ' .. res
+					local win_num = a.nvim_win_get_number(props.win)
+					res = win_num .. ' (' .. props.buf .. ') | ' .. res
 					return res
 				end,
 				window = {
