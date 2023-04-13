@@ -24,7 +24,7 @@ return {
 					margin = { vertical = 0, },
 				},
 				hide = {
-					cursorline = true,
+					cursorline = false,
 				},
 				ignore = {
 					unlisted_buffers = false,
@@ -32,6 +32,10 @@ return {
 					buftypes = {},
 					wintypes = {},
 				},
+				highlight = {
+					groups = {
+					InclineNormal = {default=true,group='lualine_a_command'},
+				}},
 			})
 		end
 	},
