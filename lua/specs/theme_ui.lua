@@ -126,20 +126,6 @@ return {
 		keys = '<leader>m'
 	},
 	{
-		'anuvyklack/windows.nvim',
-		enabled = false,
-		lazy = false,
-		dependencies = {
-			'anuvyklack/middleclass',
-		},
-		config = function()
-			vim.o.winwidth = 10
-			vim.o.winminwidth = 10
-			vim.o.equalalways = false
-			require('windows').setup()
-		end
-	},
-	{
 		'echasnovski/mini.animate',
 		enabled = true,
 		lazy = false,
