@@ -173,4 +173,22 @@ return {
 		event = 'VeryLazy',
 		opts = {scope = 'window'}
 	},
+	{
+		'ziontee113/icon-picker.nvim',
+		dependencies = 'stevearc/dressing.nvim',
+		config = function()
+			require('icon-picker').setup({
+				disable_legacy_commands = true
+			})
+		end,
+		cmd = { 'IconPickerNormal', 'IconPickerYank' },
+	},
+	{
+		'stevearc/dressing.nvim',
+		config = function()
+			require('dressing').setup({
+				select = { builtin = { min_width = { 50, 0.3 } } },
+			})
+		end,
+	},
 }
