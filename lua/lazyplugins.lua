@@ -28,7 +28,7 @@ require("lazy").setup(
 			lazy = true,
 		},
 		install = {
-			missing = false,
+			missing = true,
 			colorscheme = {'moonfly'},
 		},
 		ui = {
