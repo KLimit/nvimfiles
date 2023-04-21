@@ -149,4 +149,11 @@ return {
 			vim.keymap.set('', 'ff', function() hop.hint_words() end)
 		end,
 	},
+	{
+		'sQVe/sort.nvim',
+		config = function()
+			require('sort').setup({})
+		end,
+		cmd = 'Sort',
+	}
 }
