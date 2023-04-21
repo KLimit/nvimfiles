@@ -115,4 +115,11 @@ return {
 		end,
 		cmd = 'Neogit',
 	},
+	{
+		'rafcamlet/nvim-luapad',
+		config = function()
+			require('luapad').setup({})
+		end,
+		cmd = { 'Luapad', 'LuaRun' },
+	},
 }
