@@ -66,6 +66,8 @@ colorschemes = {
 	{ 'rfunix/vim-greenisgood' },
 	{ 'm-gail/northernlights.vim' },
 	{ 'MeF0504/vim-shiki' },
+	{ 'lunacookies/vim-substrata' },
+	{ 'bratpeki/truedark-vim' },
 }
 for i, scheme in ipairs(colorschemes) do
 	-- lazy.nvim recommends high priority for color schemes to load them early
