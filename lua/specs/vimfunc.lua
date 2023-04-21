@@ -117,7 +117,7 @@ return {
 	},
 	{
 		'vim-scripts/ScrollColors',
-		cmd = {'SCROLL', 'COLOR'},
+		cmd = {'SCROLLCOLOR'},
 	},
 	{
 		'jinfan/vim-randcolor',

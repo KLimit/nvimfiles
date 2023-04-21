@@ -195,5 +195,12 @@ return {
 		'nvim-telescope/telescope.nvim',
 		dependencies = 'nvim-lua/plenary.nvim',
 		cmd = 'Telescope',
-	}
+	},
+	{
+		'echasnovski/mini.colors',
+		config = function()
+			require('mini.colors').setup()
+		end,
+		cmd = 'Colorscheme',
+	},
 }
