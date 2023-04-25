@@ -1,5 +1,8 @@
 scriptencoding utf-8
+" set mapleader before lazyplugins
+let g:mapleader = ','
 lua require('lazyplugins')
+lua require('maps')
 lua require('autocommands')
 lua require('commands')
 " lua require('aerial')
@@ -88,20 +91,6 @@ set iskeyword+=-
 set iskeyword+=_
 set list
 set listchars+=trail:░
-" keys
-if has('win32')
-	" stupid stupid stupid
-	nmap <C-z> <Nop>
-endif
-let g:mapleader = ","
-nmap <F3> :JABSOpen<CR>
-nmap <F5> :Neogit<CR>
-nmap <F8> :AerialToggle!<CR>
-" nmap <F9> :ZenMode<CR>
-nmap <F9> :NoNeckPain<CR>
-nmap <F10> :lua require('codewindow').toggle_minimap()<CR>
-" nmap <Leader>s :lua require('alternate-toggler').toggleAlternate()<CR>
-" imap <C-e> <C-o>:BulletDemote<cr>
 
 " augroup Shenzhen
 " 	autocmd!
