@@ -25,8 +25,6 @@ if &modifiable
 	set fileencoding=utf-8
 endif
 " gui (possibly neovide-specific)
-" set guifont=3270SemiNarrow\ NF:h10
-" set guifont=Liga\ SFMono\ Nerd\ Font:h10
 set guifont=Fairfax\ Hax\ HD:h12
 
 if exists("g:neovide")
@@ -43,10 +41,8 @@ if exists("g:neovide")
 	let g:neovide_padding_left = 9
 endif
 " appearance
-" colorscheme rose-pine
-" colorscheme oxocarbon
 colorscheme moonfly
-"shell
+" shell
 " more than just setting shell to pwsh -- see shell-powershell
 let &shell = executable('pwsh') ? 'pwsh' : 'powershell'
 let &shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;'
@@ -91,12 +87,6 @@ set iskeyword+=-
 set iskeyword+=_
 set list
 set listchars+=trail:░
-
-" augroup Shenzhen
-" 	autocmd!
-" 	autocmd FileType shenzhen-solitaire setlocal colorcolumn=
-" 	autocmd FileType shenzhen-solitaire :IndentBlanklineDisable
-" augroup end
 
 """ PLUGIN SETTINGS
 " bullets.vim settings
