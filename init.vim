@@ -118,13 +118,3 @@ let g:csv_hiGroup='TabLineFill'
 hi link CSVColumnOdd Normal
 hi link CSVColumnEven Character
 hi link CSVDelimiter Comment
-" ALE settings
-let g:ale_fixers = {
-\	'*': ['remove_trailing_lines', 'trim_whitespace'],
-\	'python': ['autopep8', 'autoflake', 'black']
-\}
-let g:ale_linters = {
-\	'python': ['pycodestyle', 'flake8', 'pylint', 'pydocstyle'],
-\	'json': ['jsonlint']
-\	}
-let g:ale_lint_on_text_changed='normal'
