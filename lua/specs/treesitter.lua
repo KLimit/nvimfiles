@@ -24,7 +24,7 @@ return {
 					'vim',
 					'vimdoc',
 				},
-				highlight = { enable = false },
+				highlight = { enable = true },
 				query_linter = { enable = true, use_virtual_text = true, lint_events = {"BufWrite", "CursorHold"}},
 			}
 		end,
@@ -39,7 +39,6 @@ return {
 	},
 	{
 		'nvim-treesitter/playground',
-		enabled=true,
 		cmd = 'TSPlaygroundToggle',
 	},
 }
