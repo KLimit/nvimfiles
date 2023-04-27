@@ -109,12 +109,6 @@ if exists("g:csv_highlight_column")
 	unlet g:csv_highlight_column
 endif
 let g:csv_hiGroup='TabLineFill'
-" augroup CSV_Editing
-" 	autocmd!
-" 	autocmd BufRead,BufWritePost *.csv :%ArrangeColumn
-" 	autocmd BufWritePre *.csv :%UnArrangeColumn
-" 	autocmd FileType csv setlocal colorcolumn=
-" augroup end
 hi link CSVColumnOdd Normal
 hi link CSVColumnEven Character
 hi link CSVDelimiter Comment
