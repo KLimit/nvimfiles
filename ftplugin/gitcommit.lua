@@ -10,7 +10,6 @@ opt.foldenable = true
 -- 	cmd = 'foldclose',
 -- })
 local function folduntracked()
-	print('in the callback')
 	local untrackedline = vim.fn.search('^# Untracked files:')
 	vim.api.nvim_win_set_cursor(0, {1, 0})
 	vim.cmd({
