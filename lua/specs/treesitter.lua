@@ -14,7 +14,7 @@ return {
 			require'nvim-treesitter.configs'.setup {
 				ensure_installed = {
 					'c',
-					'gitcommit',
+					-- 'gitcommit',
 					'json',
 					'lua',
 					'perl',
@@ -39,6 +39,10 @@ return {
 	},
 	{
 		'nvim-treesitter/playground',
-		cmd = 'TSPlaygroundToggle',
+		cmd = {
+			'TSPlaygroundToggle',
+			'TSNodeUnderCursor',
+			'TSHighlightCapturesUnderCursor',
+		},
 	},
 }
