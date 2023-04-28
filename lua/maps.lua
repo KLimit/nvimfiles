@@ -21,6 +21,7 @@ map('n', '<F8>', ':AerialToggle!<CR>')
 map('n', '<F9>', ':NoNeckPain<CR>')
 map('n', '<F10>', '', {callback=function() require('codewindow').toggle_minimap() end})
 map('n', '<tab>', 'za')
+map('n', 'K', '')
 
 return {
 	map = map,
