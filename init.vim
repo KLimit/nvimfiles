@@ -9,13 +9,6 @@ lua require('commands')
 " high-level operational stuff
 let g:loaded_ruby_provider = 0
 let g:loaded_node_provider = 0
-if has('filetype')
-	filetype indent plugin on
-endif
-set autoindent
-if has('syntax')
-	syntax on
-endif
 if has('persistent_undo')
 	set undofile
 endif
@@ -24,6 +17,13 @@ set backupdir-=.
 if &modifiable
 	set fileencoding=utf-8
 endif
+if has('syntax')
+	syntax on
+endif
+if has('filetype')
+	filetype indent plugin on
+endif
+set autoindent
 " gui (possibly neovide-specific)
 set guifont=Fairfax\ Hax\ HD:h12
 
@@ -67,7 +67,6 @@ set wildmenu
 set splitright
 set showtabline=1
 set textwidth=80
-set nofoldenable
 set termguicolors
 set cursorline
 set nocursorcolumn
