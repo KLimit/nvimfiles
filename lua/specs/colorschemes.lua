@@ -1,13 +1,15 @@
 -- color schemes only
+-- (and colorbuddy for now)
 colorschemes = {
-	{ 'n1ghtmare/noirblaze-vim' },
+	{ 'n1ghtmare/noirblaze-vim' , enabled = false},
 	{ 'paulfrische/reddish.nvim' },
 	{
 		'jesseleite/nvim-noirbuddy',
-		dependencies = {'tjdevries/colorbuddy.nvim', branch = 'dev'},
+		enabled = false,
+		dependencies = { 'tjdevries/colorbuddy.nvim', branch = 'dev', },
 		config = function()
 			require('noirbuddy').setup({
-				primary = 'crt-amber',
+				preset = 'crt-amber',
 			})
 		end,
 	},
