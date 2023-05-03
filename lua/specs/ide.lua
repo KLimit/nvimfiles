@@ -81,17 +81,15 @@ return {
 		-- code tree
 		'stevearc/aerial.nvim',
 		event = 'VeryLazy',
-		config = function()
-			require('aerial').setup({
-				layout = {
-					default_direction = 'prefer_left',
-				},
-				close_automatic_events = {},
-				post_jump_cmd = 'normal! zt',
-				nerd_font = false,
-				show_guides = true,
-			})
-		end,
+		opts = {
+			layout = {
+				default_direction = 'prefer_left',
+			},
+			close_automatic_events = {},
+			post_jump_cmd = 'normal! zt',
+			nerd_font = false,
+			show_guides = true,
+		},
 	},
 	{
 		'rhysd/committia.vim',

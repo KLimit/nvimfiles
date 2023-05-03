@@ -3,73 +3,54 @@ return {
 	{
 		'windwp/nvim-autopairs',
 		event = 'VeryLazy',
-		config = function()
-			require('nvim-autopairs').setup({
-				check_ts = true,
-				map_cr = true,
-			})
-		end
+		opts = {
+			check_ts = true,
+			map_cr = true,
+		},
 	},
 	{
 		'kylechui/nvim-surround',
 		version = '*',
 		event = 'VeryLazy',
-		config = function()
-			require('nvim-surround').setup({})
-		end
+		opts = {},
+		config = true,
 	},
 	{
 		'numToStr/Comment.nvim',
 		event = 'VeryLazy',
-		config = function()
-			require('Comment').setup()
-		end,
-		-- keys = {'gc'},
+		config = true,
 	},
 	{
 		'folke/which-key.nvim',
 		event = 'VeryLazy',
-		config = function()
-			require('which-key').setup {
-			}
-		end
+		config = true,
 	},
 	{
 		'chentoast/marks.nvim',
 		event = 'VeryLazy',
-		config = function()
-				require('marks').setup({
-				})
-		end,
+		config = true,
 	},
 	{
 		'rmagatti/alternate-toggler',
 		event = 'VeryLazy',
-		config = function()
-			toggler = require('alternate-toggler')
-			toggler.setup({
-				alternates = {
-					['=='] = '!='
-				},
-				vim.keymap.set('n', '<leader>t', toggler.toggleAlternate)
-			})
-		end,
+		opts = {
+			alternates = {
+				['=='] = '!=',
+			},
+		},
+		keys = {
+			{'<leader>t', ":lua require('alternate-toggler').toggleAlternate()<CR>"}
+		},
 	},
 	{
 		'matbme/JABS.nvim',
-		config = function()
-			require('jabs').setup()
-		end,
+		config = true,
 		cmd = 'JABSOpen',
 	},
 	{
 		'chrisgrieser/nvim-various-textobjs',
 		event = 'VeryLazy',
-		config = function()
-			require('various-textobjs').setup({
-				useDefaultKeymaps = true
-			})
-		end,
+		opts = {useDefaultKeymaps = true},
 	},
 	{
 		'ibhagwan/smartyank.nvim',
@@ -81,39 +62,33 @@ return {
 		'mrjones2014/smart-splits.nvim',
 		disable = true,
 		event = 'VeryLazy',
-		config = function()
-			require('smart-splits').setup({
-				ignored_filetypes = {
-					'nofile',
-					'quickfix',
-					'prompt',
-					'no-neck-pain',
-				},
-				tmux_integration = false,
-				disable_tmux_nav_when_zoomed = false,
-			})
-		end
+		opts = {
+			ignored_filetypes = {
+				'nofile',
+				'quickfix',
+				'prompt',
+				'no-neck-pain',
+			},
+			tmux_integration = false,
+			disable_tmux_nav_when_zoomed = false,
+		},
 	},
 	{
 		'Tummetott/reticle.nvim',
 		event = 'VeryLazy',
-		config = function()
-			require('reticle').setup()
-		end,
+		config = true,
 	},
 	{
 		'Wansmer/treesj',
 		dependencies = {'nvim-treesitter/nvim-treesitter'},
+		opts = {
+			use_default_keymaps = false,
+		},
+		keys = {
+			{'<leader>j', function() require('treesj').join() end},
+			{'<leader>s', function() require('treesj').split() end},
+		},
 		cmd = {'TSJToggle', 'TSJSplit', 'TSJJoin'},
-		keys = {'<leader>j', '<leader>s'},
-		config = function()
-			local treesj = require('treesj')
-			treesj.setup({
-				use_default_keymaps = false,
-			})
-			vim.keymap.set('n', '<leader>j', treesj.join)
-			vim.keymap.set('n', '<leader>s', treesj.split)
-		end,
 	},
 	{
 		'vim-scripts/ScrollColors',
@@ -127,33 +102,27 @@ return {
 		'chrisgrieser/nvim-spider',
 		event = 'VeryLazy',
 		enabled = true,
-		config = function()
-			skipInsignificantPunctuation = true
-			vim.keymap.set({ "n", "o", "x" }, "w", "<cmd>lua require('spider').motion('w')<CR>", { desc = "Spider-w" })
-			vim.keymap.set({ "n", "o", "x" }, "e", "<cmd>lua require('spider').motion('e')<CR>", { desc = "Spider-e" })
-			vim.keymap.set({ "n", "o", "x" }, "b", "<cmd>lua require('spider').motion('b')<CR>", { desc = "Spider-b" })
-			vim.keymap.set({ "n", "o", "x" }, "ge", "<cmd>lua require('spider').motion('ge')<CR>", { desc = "Spider-ge" })
-		end
+		opts = {
+			skipInsignificantPunctuation = true,
+		},
+		keys = {
+			{'w', function() require('spider').motion('w') end, mode = {'n', 'o', 'x'}},
+			{'e', function() require('spider').motion('e') end, mode = {'n', 'o', 'x'}},
+			{'b', function() require('spider').motion('b') end, mode = {'n', 'o', 'x'}},
+			{'ge', function() require('spider').motion('ge') end, mode = {'n', 'o', 'x'}},
+		},
 	},
 	{
 		'phaazon/hop.nvim',
 		event = 'VeryLazy',
-		config = function()
-			local hop = require('hop')
-			hop.setup({uppercase_labels = true,})
-			local directions = require('hop.hint').HintDirection
-			-- vim.keymap.set('', 'f', function() hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true }) end)
-			-- vim.keymap.set('', 'F', function() hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true }) end)
-			-- vim.keymap.set('', 't', function() hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 }) end)
-			-- vim.keymap.set('', 'T', function() hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 }) end)
-			vim.keymap.set('', 'ff', function() hop.hint_words() end)
-		end,
+		opts = {uppercase_labels = true,},
+		keys = {
+			{'ff', function() require('hop.hint').hint_words() end},
+		},
 	},
 	{
 		'sQVe/sort.nvim',
-		config = function()
-			require('sort').setup({})
-		end,
+		config = true,
 		cmd = 'Sort',
 	}
 }
