@@ -48,9 +48,7 @@ return {
 	{
 		'lewis6991/gitsigns.nvim',
 		enabled = false,
-		config = function()
-			require('gitsigns').setup()
-		end
+		config = true,
 	},
 	{
 		-- code tree
@@ -82,9 +80,7 @@ return {
 	},
 	{
 		'rafcamlet/nvim-luapad',
-		config = function()
-			require('luapad').setup({})
-		end,
+		config = true,
 		cmd = { 'Luapad', 'LuaRun' },
 	},
 }
