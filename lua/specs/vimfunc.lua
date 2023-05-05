@@ -60,7 +60,7 @@ return {
 	},
 	{
 		'mrjones2014/smart-splits.nvim',
-		disable = true,
+		enabled = true,
 		event = 'VeryLazy',
 		opts = {
 			ignored_filetypes = {
@@ -69,8 +69,13 @@ return {
 				'prompt',
 				'no-neck-pain',
 			},
-			tmux_integration = false,
-			disable_tmux_nav_when_zoomed = false,
+			cursor_follows_swapped_bufs = true,
+		},
+		keys = {
+			{'<C-w>H', function() require'smart-splits'.swap_buf_left() end},
+			{'<C-w>J', function() require'smart-splits'.swap_buf_down() end},
+			{'<C-w>K', function() require'smart-splits'.swap_buf_up() end},
+			{'<C-w>L', function() require'smart-splits'.swap_buf_right() end},
 		},
 	},
 	{

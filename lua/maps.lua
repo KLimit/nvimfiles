@@ -11,6 +11,10 @@ if vim.fn.has('win32') then
 	-- stupid bug or something
 	map('n', '<C-z>', '')
 end
+-- Better to do plugin maps here or in the spec? In the spec, you can lazy-load
+-- on keys, but you can also lazy load on the command.
+-- If it makes sense to load on command, then map here. If there aren't default
+-- commands to load on, map in the spec
 -- NOTE: you may be able to use {opts} callback for some of these
 -- Though, since a lot of these are lazy-loaded upon their commands, it might be
 -- better to leave it like this
