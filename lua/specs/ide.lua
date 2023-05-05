@@ -1,11 +1,6 @@
 -- plugins that make neovim work a little more like an IDE
 return {
 	{
-		-- (probably bloated) linter and stuff
-		'dense-analysis/ale',
-		enabled = false,
-	},
-	{
 		'mfussenegger/nvim-lint',
 		enabled = false,
 		config=function()
@@ -19,26 +14,6 @@ return {
 				end,
 			})
 		end,
-	},
-	{
-		'tpope/vim-fugitive',
-		enabled = false,
-		cmd = {
-				"G",
-				"Git",
-				"Gdiffsplit",
-				"Gread",
-				"Gwrite",
-				"Ggrep",
-				"GMove",
-				"GDelete",
-				"GBrowse",
-				"GRemove",
-				"GRename",
-				"Glgrep",
-				"Gedit",
-		},
-		ft = {"fugitive"}
 	},
 	{
 		'sindrets/diffview.nvim',
@@ -90,14 +65,6 @@ return {
 			nerd_font = false,
 			show_guides = true,
 		},
-	},
-	{
-		'rhysd/committia.vim',
-		enabled = false,
-		-- Lazy-loading does not work with this plugin
-		-- consider finding a different git plugin written in Lua
-		lazy = false,
-		ft = 'gitcommit',
 	},
 	{
 		'timuntersberger/neogit',
