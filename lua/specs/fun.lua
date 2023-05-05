@@ -63,15 +63,4 @@ return {
 			})
 		end,
 	},
-	{
-		'BooleanCube/keylab.nvim',
-		requires = 'nvim-lua/plenary.nvim',
-		cmd = { 'KeylabStart' },
-		config = function()
-			require('keylab').setup({
-				LINES = 10,
-				force_accuracy = true,
-			})
-		end,
-	},
 }
