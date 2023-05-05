@@ -3,48 +3,48 @@ return {
 	{
 		-- also used by zen-mode.nvim
 		'folke/twilight.nvim',
-		config = function()
-			require('twilight').setup({})
-		end,
+		config = true,
 		cmd = {'Twilight', 'TwilightEnable', 'TwilightDisable'}
 	},
 	{
 		'folke/zen-mode.nvim',
-		config = function()
-			require('zen-mode').setup({})
-		end,
+		config = true,
 		cmd = 'ZenMode',
 	},
 	{
 		'lukas-reineke/indent-blankline.nvim',
 		enabled = true,
 		lazy = false,
-		config = function()
-			require('indent_blankline').setup {
-				use_tresitter = true,
-				show_current_context = true,
-				show_current_context_start = true,
-				show_trailing_blankline_indent = false,
-				-- space_char_blankline = '░',
-				-- show_first_indent_level = false,
-			}
-		end,
+		opts = {
+			use_tresitter = true,
+			show_current_context = true,
+			show_current_context_start = true,
+			show_trailing_blankline_indent = false,
+			-- space_char_blankline = '░',
+			-- show_first_indent_level = false,
+		}
 	},
 	{
 		'nyngwang/murmur.lua',
 		event = 'VeryLazy',
-		config = function()
-			require('murmur').setup({})
-		end,
+		config = true,
 	},
 	{
 		'asiryk/auto-hlsearch.nvim',
 		event = 'VeryLazy',
-		config = function()
-			require('auto-hlsearch').setup()
-		end,
+		config = true,
 	},
 	{
 		'm00qek/baleia.nvim',
-	}
+	},
+	{
+		'nvchad/nvim-colorizer.lua',
+		cmd = {
+			'ColorizerAttachToBuffer',
+			'ColorizerDetachFromBuffer',
+			'ColorizerReloadAllBuffers',
+			'ColorizerToggle',
+		},
+		config = true,
+	},
 }
