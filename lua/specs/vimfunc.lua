@@ -117,7 +117,7 @@ return {
 		event = 'VeryLazy',
 		opts = {uppercase_labels = true,},
 		keys = {
-			{'ff', function() require('hop.hint').hint_words() end},
+			{'ff', function() require('hop').hint_words() end},
 		},
 	},
 	{
