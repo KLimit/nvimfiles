@@ -24,6 +24,7 @@ return {
 		'folke/which-key.nvim',
 		event = 'VeryLazy',
 		config = true,
+		enabled = false,
 	},
 	{
 		'chentoast/marks.nvim',
@@ -129,5 +130,11 @@ return {
 		'sQVe/sort.nvim',
 		config = true,
 		cmd = 'Sort',
+	},
+	{
+		'chrisgrieser/nvim-early-retirement',
+		config = true,
+		event = 'VeryLazy',
+		opts = { notificationOnAutoClose = true, }
 	}
 }
