@@ -63,4 +63,8 @@ return {
 			})
 		end,
 	},
+	{
+		'seandewar/nvimesweeper',
+		cmd = 'Nvimesweeper',
+	},
 }
