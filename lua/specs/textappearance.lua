@@ -47,4 +47,21 @@ return {
 		},
 		config = true,
 	},
+	{
+		'folke/todo-comments.nvim',
+		dev = true,
+		event = 'VeryLazy',
+		config = {
+			signs = false,
+			highlight = {
+				before = 'fg',
+				keyword = 'wide_bg',
+				after = 'fg',
+				pattern = [[\C.*<(KEYWORDS)\s*:]],
+				colon_in_wide = true,
+			}
+		},
+	},
 }
+-- TODO: this is a todo message
+-- WARN: this is a warn message

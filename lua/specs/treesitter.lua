@@ -24,7 +24,10 @@ return {
 					'vim',
 					'vimdoc',
 				},
-				highlight = { enable = true },
+				highlight = {
+					enable = true,
+					disable = {'gitcommit'},
+				},
 				query_linter = { enable = true, use_virtual_text = true, lint_events = {"BufWrite", "CursorHold"}},
 			}
 		end,

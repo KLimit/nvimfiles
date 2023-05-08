@@ -29,7 +29,7 @@ require("lazy").setup(
 		},
 		install = {
 			missing = true,
-			colorscheme = {'moonfly'},
+			colorscheme = {'eva01'},
 		},
 		ui = {
 			size = { width = 0.9, height = 0.9 },
@@ -51,6 +51,9 @@ require("lazy").setup(
 		config = {
 			checker = true,
 			concurrency = 3,
+		},
+		dev = {
+			path = '~/documents/nvim-plugins',
 		},
 	}
 )
