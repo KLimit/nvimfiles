@@ -184,7 +184,10 @@ return {
 	},
 	{
 		'echasnovski/mini.colors',
-		config = true,
+		-- lazy tries to look for a 'mini' module if you use config = true
+		config = function()
+			require'mini.colors'.setup()
+		end,
 		cmd = 'Colorscheme',
 	},
 }
