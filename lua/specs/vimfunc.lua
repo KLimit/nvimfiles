@@ -139,7 +139,7 @@ return {
 	},
 	{
 		'nmac427/guess-indent.nvim',
-		config = {
+		opts = {
 			auto_cmd = false,
 		},
 		cmd = 'GuessIndent',
@@ -149,5 +149,10 @@ return {
 		enabled = false,
 		config = true,
 		cmd = 'IndentOMatic',
-	}
+	},
+	{
+		'abecodes/tabout.nvim',
+		opts = { },
+		event = 'VeryLazy',
+	},
 }
