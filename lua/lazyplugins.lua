@@ -54,6 +54,7 @@ require("lazy").setup(
 		},
 		dev = {
 			path = '~/documents/nvim-plugins',
+			fallback = true,
 		},
 	}
 )
