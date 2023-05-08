@@ -136,5 +136,18 @@ return {
 		config = true,
 		event = 'VeryLazy',
 		opts = { notificationOnAutoClose = true, }
+	},
+	{
+		'nmac427/guess-indent.nvim',
+		config = {
+			auto_cmd = false,
+		},
+		cmd = 'GuessIndent',
+	},
+	{
+		'darazaki/indent-o-matic',
+		enabled = false,
+		config = true,
+		cmd = 'IndentOMatic',
 	}
 }
