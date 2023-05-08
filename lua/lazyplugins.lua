@@ -29,7 +29,7 @@ require("lazy").setup(
 		},
 		install = {
 			missing = true,
-			colorscheme = {'eva01'},
+			colorscheme = {'nvimgelion'},
 		},
 		ui = {
 			size = { width = 0.9, height = 0.9 },

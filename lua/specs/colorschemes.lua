@@ -7,11 +7,7 @@ colorschemes = {
 		'jesseleite/nvim-noirbuddy',
 		enabled = false,
 		dependencies = { 'tjdevries/colorbuddy.nvim', branch = 'dev', },
-		config = function()
-			require('noirbuddy').setup({
-				preset = 'crt-amber',
-			})
-		end,
+		config = {preset = 'crt-amber'},
 	},
 	{
 		'rose-pine/neovim',
@@ -36,24 +32,18 @@ colorschemes = {
 	{ 'savq/melange-nvim' },
 	{
 		'olivercederborg/poimandres.nvim',
-		config = function()
-			require('poimandres').setup({})
-		end,
+		config = true,
 	},
 	{ 'savq/melange-nvim' },
 	{ 'fenetikm/falcon' },
 	{
 		'rebelot/kanagawa.nvim',
-		config = function()
-			require('kanagawa').setup({})
-		end,
+		config = true,
 	},
 	{
 		'ramojus/mellifluous.nvim',
 		dependencies = 'rktjmp/lush.nvim',
-		config = function()
-			require('mellifluous').setup({})
-		end,
+		config = true,
 	},
 	{
 		'bluz71/vim-moonfly-colors',
@@ -73,6 +63,7 @@ colorschemes = {
 	{ 'MeF0504/vim-shiki' },
 	{ 'lunacookies/vim-substrata' },
 	{ 'bratpeki/truedark-vim' },
+	{ 'nyngwang/nvimgelion' },
 }
 for i, scheme in ipairs(colorschemes) do
 	-- lazy.nvim recommends high priority for color schemes to load them early
