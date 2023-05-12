@@ -61,7 +61,7 @@ return {
 	},
 	{
 		'mrjones2014/smart-splits.nvim',
-		enabled = true,
+		enabled = false,
 		event = 'VeryLazy',
 		opts = {
 			ignored_filetypes = {
@@ -154,5 +154,13 @@ return {
 		'abecodes/tabout.nvim',
 		opts = { },
 		event = 'VeryLazy',
+	},
+	{
+		'sindrets/winshift.nvim',
+		opts = {},
+		cmd = 'WinShift',
+		keys = {
+			{'<C-w>W', ":WinShift<CR>"}
+		},
 	},
 }
