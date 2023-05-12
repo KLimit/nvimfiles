@@ -4,12 +4,6 @@ colorschemes = {
 	{ 'n1ghtmare/noirblaze-vim' , enabled = false},
 	{ 'paulfrische/reddish.nvim' },
 	{
-		'jesseleite/nvim-noirbuddy',
-		enabled = false,
-		dependencies = { 'tjdevries/colorbuddy.nvim', branch = 'dev', },
-		config = {preset = 'crt-amber'},
-	},
-	{
 		'rose-pine/neovim',
 		name = 'rose-pine',
 	},
@@ -65,10 +59,16 @@ colorschemes = {
 	{ 'bratpeki/truedark-vim' },
 	{ 'nyngwang/nvimgelion' },
 }
+local scheme = 'eva01'
 for i, scheme in ipairs(colorschemes) do
 	-- lazy.nvim recommends high priority for color schemes to load them early
-	scheme.priority = 1000
-	-- I profiled several times; it's cheap to not lazy-load these (~0.5ms)
-	scheme.lazy = false
+	scheme.lazy = true
+	scheme.event = 'VeryLazy'
+	if scheme.name == scheme then
+		-- TODO: come up with a way to to set the colorscheme from here so that you
+		-- don't have this as yet another instance of the string "eva01", etc.
+		scheme.priority = 1000
+		scheme.lazy = false
+	end
 end
 return colorschemes
