@@ -39,9 +39,11 @@ if exists("g:neovide")
 	let g:neovide_padding_bottom = 9
 	let g:neovide_padding_right = 9
 	let g:neovide_padding_left = 9
+	let g:neovide_no_idle = v:true
+	let g:neovide_refresh_rate = 30
 endif
 " appearance
-colorscheme nvimgelion
+colorscheme eva01
 " shell
 " more than just setting shell to pwsh -- see shell-powershell
 let &shell = executable('pwsh') ? 'pwsh' : 'powershell'
