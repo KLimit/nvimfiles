@@ -26,7 +26,8 @@ map('n', '<F9>', ':NoNeckPain<CR>')
 map('n', '<F10>', '', {callback=function() require('codewindow').toggle_minimap() end})
 map('n', '<tab>', 'za')
 map('n', 'K', '')
-map('n', ';;', ':lua ')
+map('n', ';;', ':')
+map('n', ';l', ':lua ')
 
 return {
 	map = map,
