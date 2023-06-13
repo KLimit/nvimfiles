@@ -20,6 +20,7 @@ end
 -- better to leave it like this
 -- Keep the mapping more like "pure" vim
 map('n', '<F3>', ':JABSOpen<CR>')
+map('n', '<F4>', ':DrexDrawerToggle<CR>')
 map('n', '<F5>', ':Neogit<CR>')
 map('n', '<F8>', ':AerialToggle!<CR>')
 map('n', '<F9>', ':NoNeckPain<CR>')

@@ -25,7 +25,7 @@ return {
 			},
 			ignore = {
 				unlisted_buffers = false,
-				filetypes = {'NvimTree', 'no-neck-pain'},
+				filetypes = {'NvimTree', 'no-neck-pain', 'drex'},
 				buftypes = {},
 				wintypes = {},
 			},

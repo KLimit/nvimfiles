@@ -29,23 +29,6 @@ return {
 		},
 	},
 	{
-		'nvim-tree/nvim-tree.lua',
-		enabled = false,
-		dependencies = {'nvim-tree/nvim-web-devicons'},
-		init = function()
-			vim.g.loaded_netrw = 1
-			vim.g.loaded_netrwPlugin = 1
-		end,
-		config = function()
-			require('nvim-tree').setup({
-				view = {
-					number = true,
-					relativenumber = true,
-				}
-			})
-		end
-	},
-	{
 		'lewis6991/gitsigns.nvim',
 		enabled = false,
 		config = true,
@@ -82,5 +65,63 @@ return {
 		'rafcamlet/nvim-luapad',
 		config = true,
 		cmd = { 'Luapad', 'LuaRun' },
+	},
+	{
+		'nvim-tree/nvim-tree.lua',
+		enabled = false,
+		dependencies = {'nvim-tree/nvim-web-devicons'},
+		init = function()
+			vim.g.loaded_netrw = 1
+			vim.g.loaded_netrwPlugin = 1
+		end,
+		opts = {
+			disable_netrw = true,
+			view = {
+				number = true,
+				relativenumber = true,
+				preserve_window_proportions = true,
+			},
+		},
+		cmd = {
+			'NvimTreeToggle',
+			'NvimTreeFocus',
+			'NvimTreeFindFile',
+			'NvimTreeCollapse',
+		},
+	},
+	{
+		'nvim-neo-tree/neo-tree.nvim',
+		enabled = false,
+		requires = {
+			'nvim-lua/plenary.nvim',
+			'nvim-tree/nvim-web-devicons',
+			'MunifTanjim/nui.nvim',
+		},
+		opts = {
+			enable_diagnostics = false,
+			sort_case_insensitive = true,
+			default_component_configs = {
+				indent = {
+					expander_collapsed = '▼',
+					expander_expanded = '▲',
+				},
+			}
+		},
+	},
+	{
+		'theblob42/drex.nvim',
+		enabled = true,
+		requires = 'kyazdani42/nvim-web-devicons',
+		setup = function()
+			require('drex.config').configure({
+				hijack_netrw = true,
+			})
+		end,
+		cmd = {
+			'Drex',
+			'DrexDrawerOpen',
+			'DrexDrawerClose',
+			'DrexDrawerToggle',
+		},
 	},
 }
