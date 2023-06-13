@@ -7,22 +7,6 @@ colorschemes = {
 		'rose-pine/neovim',
 		name = 'rose-pine',
 	},
-	{
-		'wuelnerdotexe/vim-enfocado',
-		config = function()
-			vim.g.enfocado_style = 'neon'
-			vim.g.enfocado_plugins = {
-				'aerial',
-				'indent-blankline',
-				'lspconfig',
-				'lazy',
-				'tree',
-				'treesitter',
-				'surround',
-				'which-key',
-			}
-		end,
-	},
 	{ 'savq/melange-nvim' },
 	{
 		'olivercederborg/poimandres.nvim',
