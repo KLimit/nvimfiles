@@ -28,10 +28,10 @@ colorschemes = {
 		name = 'moonfly',
 	},
 	{ url = 'https://git.sr.ht/~romainl/vim-bruin' },
-	{
-		url = 'https://git.sr.ht/~swalladge/paper.vim',
-		pin = true,  -- 404 on the url
-	},
+	-- {
+	-- 	url = 'https://git.sr.ht/~swalladge/paper.vim',
+	-- 	pin = true,  -- 404 on the url
+	-- },
 	{ url = 'https://git.sr.ht/~swalladge/antarctic-vim' },
 	{ 'heraldofsolace/nisha-vim' },
 	{ 'aonemd/kuroi.vim' },
