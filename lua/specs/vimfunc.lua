@@ -56,8 +56,10 @@ return {
 	{
 		'ibhagwan/smartyank.nvim',
 		event = 'VeryLazy',
-		clipboard = {enabled = true},
-		tmux = {enabled = false},
+		opts = {
+			clipboard = {enabled = false},
+			tmux = {enabled = false},
+		},
 	},
 	{
 		'mrjones2014/smart-splits.nvim',
