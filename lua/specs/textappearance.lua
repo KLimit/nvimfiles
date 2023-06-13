@@ -57,11 +57,25 @@ return {
 				before = 'fg',
 				keyword = 'wide_bg',
 				after = 'fg',
-				pattern = [[\C.*<(KEYWORDS)\s*:]],
+				pattern = [[.*<(KEYWORDS)\s*:]],
 				colon_in_wide = true,
-			}
+			},
+			keywords = {
+				NOTE= {alt = { 'CONSIDER', 'INFO' }},
+			},
 		},
 	},
 }
+-- FIX: fix message
 -- TODO: this is a todo message
+-- HACK: this is a hack message
 -- WARN: this is a warn message
+-- WARNING:
+-- XXX:
+-- PERF: perf message
+-- NOTE: note
+-- CONSIDER:
+-- INFO:
+-- INFO: hello
+-- note: hello
+-- TEST: test
