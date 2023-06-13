@@ -22,9 +22,9 @@ set cpo&vim
 setlocal textwidth=79
 setlocal formatoptions=cqrn
 " recommend using gqap so as to avoid unexpected indent errors
-"setlocal formatprg=yapf
+" setlocal formatprg=yapf
 " setlocal formatprg=autopep8\ -a\ --ignore\ E113\ -
-setlocal formatprg=black\ -
+" setlocal formatprg=black\ -
 
 setlocal cinkeys-=0#
 setlocal indentkeys-=0#
