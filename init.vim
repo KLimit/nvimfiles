@@ -42,6 +42,12 @@ if exists("g:neovide")
 	let g:neovide_no_idle = v:true
 	let g:neovide_refresh_rate = 30
 endif
+if exists("g:neoray")
+	set guifont=FairfaxHaxHD:h12
+	NeoraySet KeyFullscreen <>
+	NeoraySet KeyZoomIn <C-=>
+	NeoraySet KeyZoomOut <C-->
+endif
 " appearance
 colorscheme eva01
 " shell
