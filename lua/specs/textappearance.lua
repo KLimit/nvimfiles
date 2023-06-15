@@ -65,17 +65,16 @@ return {
 			},
 		},
 	},
+	{
+		'tzachar/highlight-undo.nvim',
+		config = {
+			hlgroup = 'HighlightUndo',
+			duration = 300,
+			keymaps = {
+				{'n', 'u', 'undo', {}},
+				{'n', '<C-r>', 'redo', {}},
+			},
+		},
+		keys = {'u', '<C-r>'},
+	},
 }
--- FIX: fix message
--- TODO: this is a todo message
--- HACK: this is a hack message
--- WARN: this is a warn message
--- WARNING:
--- XXX:
--- PERF: perf message
--- NOTE: note
--- CONSIDER:
--- INFO:
--- INFO: hello
--- note: hello
--- TEST: test
