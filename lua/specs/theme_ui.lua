@@ -1,4 +1,12 @@
 -- plugins that add to the UI or theme (including colorschemes)
+local a = vim.api
+local function sum(table)
+	local _sum = 0
+	for k, v in pairs(table) do
+		_sum = _sum + v
+	end
+	return _sum
+end
 return {
 	{ 'nvim-tree/nvim-web-devicons' },
 	{
@@ -7,19 +15,22 @@ return {
 		lazy = false,
 		opts = {
 			render = function(props)
-				local a = vim.api
+				local wininfo = vim.call('getwininfo', props.win)[1]
 				local bufname = a.nvim_buf_get_name(props.buf)
 				local res = bufname ~= '' and vim.fn.fnamemodify(bufname, ':t') or '[No Name]'
 				if a.nvim_buf_get_option(props.buf, 'modified') then
 					res = res .. ' [+]'
 				end
-				local win_num = a.nvim_win_get_number(props.win)
-				res = win_num .. ' (' .. props.buf .. ') | ' .. res
+				res = wininfo.winnr .. ' (' .. props.buf .. ') | ' .. res
+				local config = require('incline.config')
+				local extraspaces = wininfo.textoff + sum(config.window.padding) + sum(config.window.margin.horizontal)
+				local line, col = unpack(a.nvim_win_get_cursor(props.win))
+				if line == wininfo.topline and (wininfo.width - string.len(res) - extraspaces < col) then
+					return ''
+				end
 				return res
 			end,
-			window = {
-				margin = { vertical = 0, },
-			},
+			-- window = { margin = { vertical = 0 }, },
 			hide = {
 				cursorline = false,
 			},
