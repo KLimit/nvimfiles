@@ -56,15 +56,24 @@ return {
 			highlight = {
 				before = 'fg',
 				keyword = 'wide_bg',
-				after = 'fg',
+				after = '',
 				pattern = [[.*<(KEYWORDS)\s*:]],
 				colon_in_wide = true,
 			},
 			keywords = {
-				NOTE= {alt = { 'CONSIDER', 'INFO' }},
+				NOTE = {alt = { 'CONSIDER', 'INFO' }},
+				BAD = {color = 'error'},
 			},
 		},
 	},
+	-- BAD: Text after the tag
+	-- HACK:
+	-- WARN:
+	-- TODO:
+	-- PERF:
+	-- TEST:
+	-- NOTE:
+	-- INFO:
 	{
 		'tzachar/highlight-undo.nvim',
 		config = {
