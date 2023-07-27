@@ -32,7 +32,7 @@ colorschemes = {
 	-- 	url = 'https://git.sr.ht/~swalladge/paper.vim',
 	-- 	pin = true,  -- 404 on the url
 	-- },
-	{ url = 'https://git.sr.ht/~swalladge/antarctic-vim' },
+	-- { url = 'https://git.sr.ht/~swalladge/antarctic-vim' },
 	{ 'heraldofsolace/nisha-vim' },
 	{ 'aonemd/kuroi.vim' },
 	{ 'hachy/eva01.vim' },

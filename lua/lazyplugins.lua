@@ -17,12 +17,10 @@ vim.opt.rtp:prepend(lazypath)
 -- set mapleader before lazy to make sure mappings are what I want
 vim.g.mapleader = ","
 
--- setup plugins
--- plugins should be a table (list with plugin spec) or string (lua module name
--- that contains a plugin spec)
--- opts (optional configuration)
+specs = 'specs'
+
 require("lazy").setup(
-	"specs",
+	specs,
 	{
 		defaults = {
 			lazy = true,

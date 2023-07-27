@@ -5,10 +5,10 @@ lua require('lazyplugins')
 lua require('maps')
 lua require('autocommands')
 lua require('commands')
-" lua require('aerial')
 " high-level operational stuff
 let g:loaded_ruby_provider = 0
 let g:loaded_node_provider = 0
+let g:netrw_banner = 0
 if has('persistent_undo')
 	set undofile
 endif
@@ -78,7 +78,6 @@ set textwidth=80
 set termguicolors
 set cursorline
 set nocursorcolumn
-let g:netrw_banner = 0
 " statusline/tabline/winbar
 set laststatus=3
 set rulerformat=%4(%P%)
