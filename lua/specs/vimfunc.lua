@@ -84,7 +84,9 @@ return {
 	{
 		'Tummetott/reticle.nvim',
 		event = 'VeryLazy',
-		config = true,
+		config = {
+			always_highlight_number = true,
+		},
 	},
 	{
 		'Wansmer/treesj',

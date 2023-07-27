@@ -201,4 +201,10 @@ return {
 		end,
 		cmd = 'Colorscheme',
 	},
+	{
+		'mawkler/modicator.nvim',
+		enabled = true,
+		event = 'VeryLazy',
+		config = true,
+	},
 }
