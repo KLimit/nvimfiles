@@ -27,8 +27,13 @@ return {
 				highlight = {
 					enable = true,
 					disable = {'gitcommit'},
+					additional_vim_regex_highlighting = true,
 				},
-				query_linter = { enable = true, use_virtual_text = true, lint_events = {"BufWrite", "CursorHold"}},
+				query_linter = {
+					enable = true,
+					use_virtual_text = true,
+					lint_events = {"BufWrite", "CursorHold"},
+				},
 			}
 		end,
 	},
