@@ -113,7 +113,7 @@ return {
 		event = 'VeryLazy',
 		enabled = true,
 		opts = {
-			skipInsignificantPunctuation = true,
+			skipInsignificantPunctuation = false,
 		},
 		keys = {
 			{'w', function() require('spider').motion('w') end, mode = {'n', 'o', 'x'}},
