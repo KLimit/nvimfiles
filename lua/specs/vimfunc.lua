@@ -94,6 +94,13 @@ return {
 		dependencies = {'nvim-treesitter/nvim-treesitter'},
 		opts = {
 			use_default_keymaps = false,
+			langs = {
+				python = {
+					pattern_list = {split = {last_separator = true}},
+					argument_list = {split = {last_separator = true}},
+					parameters = {split = {last_separator = true}},
+				},
+			},
 		},
 		keys = {
 			{'<leader>j', function() require('treesj').join() end},
