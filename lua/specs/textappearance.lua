@@ -54,7 +54,7 @@ return {
 		'folke/todo-comments.nvim',
 		dev = true,
 		event = 'VeryLazy',
-		config = {
+		opts = {
 			signs = false,
 			highlight = {
 				before = 'fg',
@@ -79,7 +79,7 @@ return {
 	-- INFO:
 	{
 		'tzachar/highlight-undo.nvim',
-		config = {
+		opts = {
 			hlgroup = 'HighlightUndo',
 			duration = 300,
 			keymaps = {

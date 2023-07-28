@@ -70,7 +70,7 @@ return {
 		'nvim-tree/nvim-tree.lua',
 		enabled = false,
 		dependencies = {'nvim-tree/nvim-web-devicons'},
-		init = function()
+		config = function()
 			vim.g.loaded_netrw = 1
 			vim.g.loaded_netrwPlugin = 1
 		end,
@@ -92,7 +92,7 @@ return {
 	{
 		'nvim-neo-tree/neo-tree.nvim',
 		enabled = false,
-		requires = {
+		dependencies = {
 			'nvim-lua/plenary.nvim',
 			'nvim-tree/nvim-web-devicons',
 			'MunifTanjim/nui.nvim',
@@ -111,8 +111,8 @@ return {
 	{
 		'theblob42/drex.nvim',
 		enabled = true,
-		requires = 'kyazdani42/nvim-web-devicons',
-		setup = function()
+		dependencies = 'nvim-tree/nvim-web-devicons',
+		config = function()
 			require('drex.config').configure({
 				hijack_netrw = true,
 			})
