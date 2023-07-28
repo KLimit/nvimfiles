@@ -93,18 +93,3 @@ set iskeyword+=-
 set iskeyword+=_
 set list
 set listchars+=trail:░
-
-""" PLUGIN SETTINGS
-" bullets.vim settings
-let g:bullets_set_mappings = 1
-" csv.vim settings
-if exists("g:csv_no_conceal")
-	unlet g:csv_no_conceal
-endif
-if exists("g:csv_highlight_column")
-	unlet g:csv_highlight_column
-endif
-let g:csv_hiGroup='TabLineFill'
-hi link CSVColumnOdd Normal
-hi link CSVColumnEven Character
-hi link CSVDelimiter Comment
