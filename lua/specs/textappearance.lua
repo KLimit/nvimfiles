@@ -89,4 +89,10 @@ return {
 		},
 		keys = {'u', '<C-r>'},
 	},
+	{
+		'utilyre/sentiment.nvim',
+		event = 'VeryLazy',
+		init = function() vim.g.loadedmatchparen = 1 end,
+		config = true,
+	},
 }
