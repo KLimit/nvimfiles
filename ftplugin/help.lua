@@ -6,4 +6,5 @@ map('n', 'k', '<C-Y>')
 map('n', 'd', '<C-D>', {nowait=true})
 map('n', 'u', '<C-U>')
 map('n', '<C-K>', 'k', {noremap=true})
+map('n', 'q', ':q<CR>', {nowait=true})
 opt.cursorline = false
