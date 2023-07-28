@@ -28,6 +28,9 @@ return {
 		'nyngwang/murmur.lua',
 		event = 'VeryLazy',
 		config = true,
+		opts = {
+			yank_blink = { on_yank = { higroup = 'IncSearch', timeout = 2000, }, },
+		},
 	},
 	{
 		'asiryk/auto-hlsearch.nvim',

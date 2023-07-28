@@ -55,6 +55,7 @@ return {
 	},
 	{
 		'ibhagwan/smartyank.nvim',
+		enabled = false,
 		event = 'VeryLazy',
 		opts = {
 			clipboard = {enabled = false},
