@@ -6,6 +6,9 @@ local function bmap(mode, lhs, rhs, opts)
 	opts = opts or {}
 	vim.api.nvim_buf_set_keymap(0, mode, lhs, rhs, opts)
 end
+local function del_bmap(mode, lhs)
+	vim.api.nvim_buf_del_keymap(0, mode, lhs)
+end
 vim.g.mapleader = ','
 if vim.fn.has('win32') then
 	-- stupid bug or something
@@ -33,4 +36,5 @@ map('n', ';l', ':lua ')
 return {
 	map = map,
 	bmap = bmap,
+	del_bmap = del_bmap
 }

@@ -1,1 +1,1 @@
-require'config.pager'
+require'config.pager'.enable()
