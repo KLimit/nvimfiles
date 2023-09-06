@@ -67,4 +67,9 @@ return {
 		'seandewar/nvimesweeper',
 		cmd = 'Nvimesweeper',
 	},
+	{
+		'NStefan002/speedtyper.nvim',
+		cmd = 'Speedtyper',
+		config = true,
+	},
 }
