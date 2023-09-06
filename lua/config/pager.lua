@@ -33,6 +33,7 @@ function M.enable()
 		map('n', unpack(mapping))
 	end
 	local state = get_bufferstate()
+	state.__enabled = true
 	state.cursorline = opt.cursorline
 	opt.cursorline = false
 end
@@ -42,6 +43,7 @@ function M.disable()
 		unmap('n', unpack(mapping))
 	end
 	local state = get_bufferstate()
+	state.__enabled = false
 	opt.cursorline = state.cursorline
 end
 
@@ -49,10 +51,8 @@ function M.toggle()
 	local state = get_bufferstate()
 	if state.__enabled then
 		M.disable()
-		state.__enabled = false
 	else
 		M.enable()
-		state.__enabled = true
 	end
 end
 
