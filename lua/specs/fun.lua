@@ -38,13 +38,7 @@ return {
 	},
 	{
 		'tamton-aquib/duck.nvim',
-		config = function()
-			local duck = require('duck')
-			vim.keymap.set('n', '<leader>kit', function() duck.hatch('🐈') end, {})
-			vim.keymap.set('n', '<leader>sus', function() duck.hatch('ඞ') end, {})
-			vim.keymap.set('n', '<leader>duckd', function() duck.cook() end, {})
-		end,
-		keys = {'<leader>kit', '<leader>sus', '<leader>duckd'}
+		opts = {},
 	},
 	{
 		'jim-fx/sudoku.nvim',
