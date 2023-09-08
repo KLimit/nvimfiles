@@ -2,6 +2,7 @@
 return {
 	{
 		'windwp/nvim-autopairs',
+		-- enabled = false,
 		event = 'VeryLazy',
 		config = function()
 			local autopairs = require'nvim-autopairs'
@@ -178,6 +179,17 @@ return {
 		cmd = 'WinShift',
 		keys = {
 			{'<C-w>W', ":WinShift<CR>"}
+		},
+	},
+	{
+		'altermo/ultimate-autopair.nvim',
+		event = 'VeryLazy',
+		opts = {
+			bs = {
+				map = {'<bs>', '<C-w>'},
+				cmap = {'<bs>', '<C-w>'},
+			},
+			fastwarp = {enable = false},
 		},
 	},
 }
