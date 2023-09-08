@@ -3,10 +3,15 @@ return {
 	{
 		'windwp/nvim-autopairs',
 		event = 'VeryLazy',
-		opts = {
-			check_ts = true,
-			map_cr = true,
-		},
+		config = function()
+			local autopairs = require'nvim-autopairs'
+			local Rule = require'nvim-autopairs.rule'
+			local cond = require'nvim-autopairs.conds'
+			autopairs.setup({
+					check_ts = true,
+					map_cr = true,
+			})
+		end,
 	},
 	{
 		'kylechui/nvim-surround',
