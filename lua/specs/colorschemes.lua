@@ -48,15 +48,15 @@ colorschemes = {
 	{ 'cryptomilk/nightcity.nvim' },
 }
 local scheme = 'eva01'
-for i, scheme in ipairs(colorschemes) do
+for i, scheme_ in ipairs(colorschemes) do
 	-- lazy.nvim recommends high priority for color schemes to load them early
-	scheme.lazy = true
-	scheme.event = 'VeryLazy'
-	if scheme.name == scheme then
+	scheme_.lazy = true
+	scheme_.event = 'VeryLazy'
+	if scheme_.name == scheme then
 		-- TODO: come up with a way to to set the colorscheme from here so that you
 		-- don't have this as yet another instance of the string "eva01", etc.
-		scheme.priority = 1000
-		scheme.lazy = false
+		scheme_.priority = 1000
+		scheme_.lazy = false
 	end
 end
 return colorschemes
