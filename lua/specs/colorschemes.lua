@@ -42,6 +42,10 @@ colorschemes = {
 	{ 'lunacookies/vim-substrata' },
 	{ 'bratpeki/truedark-vim' },
 	{ 'nyngwang/nvimgelion' },
+	{ 'everblush/nvim', name = 'everblush' },
+	{ 'zootedb0t/citruszest.nvim' },
+	{ 'ishan9299/modus-theme-vim' },
+	{ 'cryptomilk/nightcity.nvim' },
 }
 local scheme = 'eva01'
 for i, scheme in ipairs(colorschemes) do
