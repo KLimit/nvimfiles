@@ -192,4 +192,9 @@ return {
 			fastwarp = {enable = false},
 		},
 	},
+	{
+		'chrisgrieser/nvim-puppeteer',
+		dependencies = 'nvim-treesitter/nvim-treesitter',
+		lazy = false,  -- apparently, the plugin lazy-loads itself
+	},
 }
