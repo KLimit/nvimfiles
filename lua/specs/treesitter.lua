@@ -9,8 +9,11 @@ return {
 			})
 		end,
 		config = function()
-			-- might be hacky, but specify use of zig compiler
-			require'nvim-treesitter.install'.compilers = {'zig'}
+			if vim.fn.has('win32') == 1 then
+				vim.print(require'nvim-treesitter.install'.compilers)
+				-- might be hacky, but specify use of zig compiler
+				require'nvim-treesitter.install'.compilers = {'zig'}
+			end
 			require'nvim-treesitter.configs'.setup {
 				ensure_installed = {
 					'c',

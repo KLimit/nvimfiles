@@ -10,7 +10,7 @@ local function del_bmap(mode, lhs)
 	vim.api.nvim_buf_del_keymap(0, mode, lhs)
 end
 vim.g.mapleader = ','
-if vim.fn.has('win32') then
+if vim.fn.has('win32') == 1 then
 	-- stupid bug or something
 	map('n', '<C-z>', '')
 end
