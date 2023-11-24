@@ -35,7 +35,9 @@ function M.enable()
 	local state = get_bufferstate()
 	state.__enabled = true
 	state.cursorline = opt.cursorline
+	state.readonly = opt.readonly
 	opt.cursorline = false
+	opt.readonly = true
 end
 
 function M.disable()
@@ -45,6 +47,7 @@ function M.disable()
 	local state = get_bufferstate()
 	state.__enabled = false
 	opt.cursorline = state.cursorline
+	opt.readonly = state.readonly
 end
 
 function M.toggle()
