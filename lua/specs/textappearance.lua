@@ -15,13 +15,15 @@ return {
 		'lukas-reineke/indent-blankline.nvim',
 		enabled = true,
 		lazy = false,
+		main = 'ibl',
 		opts = {
-			use_tresitter = true,
-			show_current_context = true,
-			show_current_context_start = true,
-			show_trailing_blankline_indent = false,
-			-- space_char_blankline = '░',
-			-- show_first_indent_level = false,
+			scope = {
+				enabled = true,
+				show_start = true,
+			},
+			whitespace = {
+				remove_blankline_trail = true,
+			},
 		}
 	},
 	{
