@@ -1,7 +1,9 @@
-local M = {}
 local api = vim.api
+local cattable = require'lib.cattable'
 
 local shebang = '#!/usr/bin/env '
+
+local M = {}
 
 function M.write_shebang (exargs)
 	local target = exargs.args
@@ -23,18 +25,20 @@ function M.pyscript(exargs)
 		'if __name__ == "__main__":',
 		'    sys.exit(main(**mainargs()))',
 	}
-	for i, chunk in ipairs({
+	local head = cattable(
 		{shebang .. 'python3'},
 		imports,
 		{'', ''},
 		main,
 		{'', ''},
-		mainargs,
+		mainargs
+	)
+	local tail = cattable(
 		{'', ''},
-		namemain,
-	}) do
-		api.nvim_buf_set_lines( 0, -1, -1, false, chunk )
-	end
+		namemain
+	)
+	api.nvim_buf_set_lines( 0, 0, 0, false, head )
+	api.nvim_buf_set_lines(0, -1, -1, false, tail)
 end
 
 return M
