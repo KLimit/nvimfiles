@@ -11,22 +11,22 @@ end
 
 function M.pyscript(exargs)
 	-- local index = api.nvim_win_get_cursor(0)[1] - 1
+	local imports = {'import argparse', 'import sys'}
 	local main = {'def main(*args, **kwargs):', '    return 0'}
 	local mainargs = {
 		'def mainargs(argv=None):',
-		'    import argparse',
 		'    pser = argparse.ArgumentParser()',
-		'',
 		'    args = pser.parse_args(argv)',
 		'    return vars(args)',
 	}
 	local namemain = {
 		'if __name__ == "__main__":',
-		'    import sys',
 		'    sys.exit(main(**mainargs()))',
 	}
 	for i, chunk in ipairs({
 		{shebang .. 'python3'},
+		imports,
+		{'', ''},
 		main,
 		{'', ''},
 		mainargs,
