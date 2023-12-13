@@ -11,6 +11,8 @@ function M.write_shebang (exargs)
 	api.nvim_buf_set_lines(0, 0, 0, false, {shebang .. target})
 end
 
+-- TODO: set filetype if not set for "script" functions
+
 function M.pyscript(exargs)
 	-- local index = api.nvim_win_get_cursor(0)[1] - 1
 	local imports = {'import argparse', 'import sys'}
@@ -39,6 +41,14 @@ function M.pyscript(exargs)
 	)
 	api.nvim_buf_set_lines( 0, 0, 0, false, head )
 	api.nvim_buf_set_lines(0, -1, -1, false, tail)
+end
+
+function M.perlscript(exargs)
+	local uses = {'use strict;', 'use warnings;'}
+	local loop = {'while(<>) {', '\tprint;', '}'}
+	api.nvim_buf_set_lines( 0, 0, 0, false,
+		cattable({shebang .. 'perl'}, uses, {''}, loop)
+	)
 end
 
 return M
