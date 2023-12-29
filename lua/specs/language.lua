@@ -1,4 +1,5 @@
 -- filetype-specific plugins
+local iswindows = require'lib.iswindows'
 return {
 	{
 		'chrisbra/csv.vim',
@@ -36,6 +37,7 @@ return {
 	{
 		'vim-scripts/Windows-Powershell-Syntax-Plugin',
 		ft = 'ps1',
+		cond = iswindows,
 	},
 	{
 		'cespare/vim-toml',
@@ -44,6 +46,7 @@ return {
 	{
 		'm42e/trace32-practice.vim',
 		ft = 'practice',
+		cond = iswindows,
 	},
 	{
 		'pedrohdz/vim-yaml-folds',

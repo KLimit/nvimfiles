@@ -1,4 +1,5 @@
 -- plugins that are directly related to treesitter
+local iswindows = require'lib.iswindows'
 return {
 	{
 		'nvim-treesitter/nvim-treesitter',
@@ -9,7 +10,7 @@ return {
 			})
 		end,
 		config = function()
-			if vim.fn.has('win32') == 1 then
+			if iswindows() then
 				vim.print(require'nvim-treesitter.install'.compilers)
 				-- might be hacky, but specify use of zig compiler
 				require'nvim-treesitter.install'.compilers = {'zig'}
