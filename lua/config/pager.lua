@@ -11,6 +11,8 @@ local M = {}
 M.keys = {
 	{'j', '<C-E>'},
 	{'k', '<C-Y>'},
+	{'h', 'zh'},
+	{'l', 'zl'},
 	{'d', '<C-D>', {nowait=true}},
 	{'u', '<C-U>'},
 	{'<C-K>', 'k', {noremap=true}},
