@@ -59,12 +59,18 @@ return {
 				component_separators = { left = '│', right = '│' },
 			},
 			sections = {
-				lualine_a = {{
-					'buffers',
-					mode = 4,
-					icons_enabled = false,
-					symbols = { modified = ' *', alternate_file = '#', directory = '🗁' }
-				}},
+				lualine_a = {
+					{
+						'mode',
+						fmt = function(str) return str:sub(1, 1) end,
+					},
+					{
+						'buffers',
+						mode = 4,
+						icons_enabled = false,
+						symbols = { modified = ' *', alternate_file = '#', directory = '🗁' }
+					},
+				},
 				lualine_b = {
 					{
 						function()
