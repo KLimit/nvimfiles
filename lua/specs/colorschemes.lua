@@ -43,7 +43,10 @@ colorschemes = {
 	{ 'bratpeki/truedark-vim' },
 	{ 'nyngwang/nvimgelion' },
 	{ 'everblush/nvim', name = 'everblush' },
-	{ 'zootedb0t/citruszest.nvim' },
+	{
+		'zootedb0t/citruszest.nvim',
+		config = {option = {transparent = true}}
+	},
 	{ 'ishan9299/modus-theme-vim' },
 	{ 'cryptomilk/nightcity.nvim' },
 	{
@@ -52,6 +55,7 @@ colorschemes = {
 			transparent = true,
 		}
 	},
+	{ 'lighthaus-theme/vim-lighthaus' },
 }
 -- this is the scheme to use
 for i, scheme_ in ipairs(colorschemes) do
