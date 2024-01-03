@@ -46,13 +46,19 @@ colorschemes = {
 	{ 'zootedb0t/citruszest.nvim' },
 	{ 'ishan9299/modus-theme-vim' },
 	{ 'cryptomilk/nightcity.nvim' },
+	{
+		'scottmckendry/cyberdream.nvim',
+		config = {
+			transparent = true,
+		}
+	},
 }
-local scheme = 'eva01'
+-- this is the scheme to use
 for i, scheme_ in ipairs(colorschemes) do
 	-- lazy.nvim recommends high priority for color schemes to load them early
 	scheme_.lazy = true
 	scheme_.event = 'VeryLazy'
-	if scheme_.name == scheme then
+	if scheme_.name == vim.g.colors_name then
 		-- TODO: come up with a way to to set the colorscheme from here so that you
 		-- don't have this as yet another instance of the string "eva01", etc.
 		scheme_.priority = 1000

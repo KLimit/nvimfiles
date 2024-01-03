@@ -27,7 +27,7 @@ require("lazy").setup(
 		},
 		install = {
 			missing = true,
-			colorscheme = {'nvimgelion'},
+			colorscheme = {vim.g.colors_name},
 		},
 		ui = {
 			size = { width = 0.9, height = 0.9 },

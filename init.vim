@@ -1,10 +1,16 @@
 scriptencoding utf-8
 " set mapleader before lazyplugins
 let g:mapleader = ','
+" set a global colorscheme variable for lazy to use
+" NOTE: colors_name might not be a good variable name since it gets set by the
+" colorscheme when set (or is supposed to be set)
+let g:colors_name = 'cyberdream'
 lua require('lazyplugins')
 lua require('maps')
 lua require('autocommands')
 lua require('commands')
+" load the colorscheme variable after lazy loads everything
+execute 'colorscheme ' . g:colors_name
 " high-level operational stuff
 let g:loaded_ruby_provider = 0
 let g:loaded_node_provider = 0
@@ -48,8 +54,6 @@ if exists("g:neoray")
 	NeoraySet KeyZoomIn <C-=>
 	NeoraySet KeyZoomOut <C-->
 endif
-" appearance
-colorscheme eva01
 if has('win32')
 	" shell
 	" more than just setting shell to pwsh -- see shell-powershell
