@@ -32,6 +32,7 @@ map('n', '<tab>', 'za')
 map('n', 'K', '')
 map('n', ';;', ':')
 map('n', ';l', ':lua ')
+map('n', '<leader>v', '', {callback = require'config.drawing'.toggle})
 
 return {
 	map = map,
