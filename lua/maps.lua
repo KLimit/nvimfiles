@@ -32,7 +32,9 @@ map('n', '<tab>', 'za')
 map('n', 'K', '')
 map('n', ';;', ':')
 map('n', ';l', ':lua ')
+-- since these aren't plugins, we don't need to wrap them in an anonymous
 map('n', '<leader>v', '', {callback = require'config.drawing'.toggle})
+map('n', '<leader>r', '', {callback = require'funcs.makereturn'.toggle})
 
 return {
 	map = map,
