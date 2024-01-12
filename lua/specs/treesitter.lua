@@ -38,6 +38,22 @@ return {
 					use_virtual_text = true,
 					lint_events = {"BufWrite", "CursorHold"},
 				},
+				textobjects = {
+					enable = true,
+					select = {
+						enable = true,
+						lookahead = true,
+						keymaps = {
+							['af'] = '@function.outer',
+							['if'] = '@function.inner',
+							['ac'] = '@class.outer',
+							['ic'] = '@class.inner',
+							['as'] = {query = '@scope', query_group = 'locals', desc = 'select language scope'},
+						},
+						selection_modes = 'V',  -- line selection
+						-- include_surrounding_whitespace = true,
+					},
+				},
 			}
 		end,
 	},
@@ -55,4 +71,11 @@ return {
 			'TSHighlightCapturesUnderCursor',
 		},
 	},
+	{
+		'nvim-treesitter/nvim-treesitter-textobjects',
+		lazy = false,
+		-- TODO: make all relevant plugins after nvim-treesitter like in colorscheme
+		after = 'nvim-treesitter',
+		requires = 'nvim-treesitter/nvim-treesitter',
+	}
 }
