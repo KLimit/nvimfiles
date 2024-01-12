@@ -53,6 +53,7 @@ colorschemes = {
 		'scottmckendry/cyberdream.nvim',
 		config = {
 			transparent = true,
+			italic_comments = true,
 		}
 	},
 	{ 'lighthaus-theme/vim-lighthaus' },
