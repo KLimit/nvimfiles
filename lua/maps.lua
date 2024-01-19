@@ -1,4 +1,4 @@
-M = {}
+local M = {}
 -- TODO: make a factory to do make these shortcuts
 -- To do this you need to know Lua getattr-type thing
 function M.map(mode, lhs, rhs, opts)
