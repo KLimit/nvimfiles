@@ -34,6 +34,7 @@ return {
 	},
 	{
 		'chentoast/marks.nvim',
+		enabled = false,
 		event = 'VeryLazy',
 		config = true,
 	},
