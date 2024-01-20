@@ -33,27 +33,8 @@ set autoindent
 " gui (possibly neovide-specific)
 set guifont=Fairfax\ Hax\ HD:h12
 
-if exists("g:neovide")
-	" let g:neovide_remember_window_size = v:true
-	let g:neovide_scale_factor=1.0
-	let g:neovide_cursor_animation_length=0.03
-	let g:neovide_cursor_trail_size = 0.6
-	let g:neovide_cursor_unfocused_outline_width = 0.06
-	let g:neovide_remember_window_size = v:false
-	let g:neovide_fullscreen = v:false
-	let g:neovide_padding_top = 9
-	let g:neovide_padding_bottom = 9
-	let g:neovide_padding_right = 9
-	let g:neovide_padding_left = 9
-	let g:neovide_no_idle = v:true
-	let g:neovide_refresh_rate = 30
-endif
-if exists("g:neoray")
-	set guifont=FairfaxHaxHD:h12
-	NeoraySet KeyFullscreen <>
-	NeoraySet KeyZoomIn <C-=>
-	NeoraySet KeyZoomOut <C-->
-endif
+lua require('guis')
+
 if has('win32')
 	" shell
 	" more than just setting shell to pwsh -- see shell-powershell
