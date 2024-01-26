@@ -11,7 +11,7 @@ return {
 		end,
 		config = function()
 			if iswindows() then
-				vim.print(require'nvim-treesitter.install'.compilers)
+				-- vim.print(require'nvim-treesitter.install'.compilers)
 				-- might be hacky, but specify use of zig compiler
 				require'nvim-treesitter.install'.compilers = {'zig'}
 			end
