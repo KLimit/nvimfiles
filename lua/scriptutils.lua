@@ -15,8 +15,9 @@ end
 
 function M.pyscript(exargs)
 	-- local index = api.nvim_win_get_cursor(0)[1] - 1
+	-- TODO: just use multiline strings [[]]
 	local imports = {'import argparse', 'import sys'}
-	local main = {'def main(*args, **kwargs):', '    return 0'}
+	local main = {'def main():', '    return 0'}
 	local mainargs = {
 		'def mainargs(argv=None):',
 		'    pser = argparse.ArgumentParser()',
@@ -36,7 +37,7 @@ function M.pyscript(exargs)
 		mainargs
 	)
 	local tail = cattable(
-		{'', ''},
+		{''},  -- there's an extra newline for some reason, so only one here
 		namemain
 	)
 	api.nvim_buf_set_lines( 0, 0, 0, false, head )
