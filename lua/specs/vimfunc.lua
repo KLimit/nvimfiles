@@ -34,6 +34,7 @@ return {
 	},
 	{
 		'chentoast/marks.nvim',
+		enabled = false,
 		event = 'VeryLazy',
 		config = true,
 	},
@@ -197,5 +198,9 @@ return {
 		'chrisgrieser/nvim-puppeteer',
 		dependencies = 'nvim-treesitter/nvim-treesitter',
 		lazy = false,  -- apparently, the plugin lazy-loads itself
+	},
+	{
+		'jbyuki/venn.nvim',
+		cmd = 'VBox',
 	},
 }

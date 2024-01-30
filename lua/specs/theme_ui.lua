@@ -54,6 +54,7 @@ return {
 		opts = {
 			options = {
 				globalstatus = true,
+				theme = vim.g.colors_name,
 				-- the font Fairfax HD has Powerline symbols at a different code point
 				section_separators = { left = '󿂰', right = '󿂲' },
 				component_separators = { left = '│', right = '│' },

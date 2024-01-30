@@ -1,15 +1,29 @@
-local function map(mode, lhs, rhs, opts)
+local M = {}
+-- TODO: make a factory to do make these shortcuts
+-- To do this you need to know Lua getattr-type thing
+function M.map(mode, lhs, rhs, opts)
 	opts = opts or {}
 	vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
 end
-local function bmap(mode, lhs, rhs, opts)
+function M.del_map(mode, lhs)
+	opts = opts or {}
+	vim.api.nvim_del_keymap(mode, lhs)
+end
+function M.bmap(mode, lhs, rhs, opts)
+	-- buffer-local map
 	opts = opts or {}
 	vim.api.nvim_buf_set_keymap(0, mode, lhs, rhs, opts)
 end
-local function del_bmap(mode, lhs)
+function M.del_bmap(mode, lhs)
+	-- buffer-local unmap
 	vim.api.nvim_buf_del_keymap(0, mode, lhs)
 end
+
+local map = M.map
+local unmap = M.del_map
+
 vim.g.mapleader = ','
+
 if vim.fn.has('win32') == 1 then
 	-- stupid bug or something
 	map('n', '<C-z>', '')
@@ -32,9 +46,11 @@ map('n', '<tab>', 'za')
 map('n', 'K', '')
 map('n', ';;', ':')
 map('n', ';l', ':lua ')
+-- since these aren't plugins, we don't need to wrap them in an anonymous
+map('n', '<leader>v', '', {callback = require'config.drawing'.toggle})
+map('n', '<leader>r', '', {callback = require'funcs.makereturn'.toggle})
 
-return {
-	map = map,
-	bmap = bmap,
-	del_bmap = del_bmap
-}
+-- too lazy to learn how to use maps well
+-- unmap('n', 'm')
+
+return M
