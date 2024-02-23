@@ -31,7 +31,7 @@ return {
 				highlight = {
 					enable = true,
 					disable = {'gitcommit'},
-					additional_vim_regex_highlighting = true,
+					additional_vim_regex_highlighting = false,
 				},
 				query_linter = {
 					enable = true,

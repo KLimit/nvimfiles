@@ -140,7 +140,7 @@ return {
 	},
 	{
 		'echasnovski/mini.animate',
-		enabled = true,
+		cond = false,
 		lazy = false,
 		config = function()
 			local animate = require('mini.animate')
