@@ -197,6 +197,7 @@ return {
 	{
 		'chrisgrieser/nvim-puppeteer',
 		dependencies = 'nvim-treesitter/nvim-treesitter',
+		cond = false,
 		lazy = false,  -- apparently, the plugin lazy-loads itself
 	},
 	{
