@@ -124,4 +124,10 @@ return {
 			'DrexDrawerToggle',
 		},
 	},
+	{
+		'simonmclean/triptych.nvim',
+		dependencies = { 'nvim-lua/plenary.nvim', },
+		config = true,
+		cmd = {'Triptych'},
+	}
 }

@@ -214,4 +214,11 @@ return {
 		event = 'VeryLazy',
 		config = true,
 	},
+	{
+		'freddiehaddad/feline.nvim',
+		config = true,
+		cond = false,
+		lazy = false,
+		-- event = 'VeryLazy',
+	}
 }

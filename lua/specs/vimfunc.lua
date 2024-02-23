@@ -203,4 +203,8 @@ return {
 		'jbyuki/venn.nvim',
 		cmd = 'VBox',
 	},
+	{
+		'tyru/capture.vim',
+		cmd = 'Capture',
+	},
 }
