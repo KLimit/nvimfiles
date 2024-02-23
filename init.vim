@@ -5,6 +5,8 @@ let g:mapleader = ','
 " NOTE: colors_name might not be a good variable name since it gets set by the
 " colorscheme when set (or is supposed to be set)
 let g:colors_name = 'citruszest'
+
+set termguicolors
 lua require('lazyplugins')
 lua require('maps')
 lua require('autocommands')
