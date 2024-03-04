@@ -11,6 +11,7 @@ lua require('lazyplugins')
 lua require('maps')
 lua require('autocommands')
 lua require('commands')
+lua require('config.statusline')
 " load the colorscheme variable after lazy loads everything
 execute 'colorscheme ' . g:colors_name
 " high-level operational stuff

@@ -40,15 +40,15 @@ return {
 				buftypes = {},
 				wintypes = {},
 			},
-			highlight = {
-				groups = {
-				InclineNormal = {default=true,group='lualine_a_command'},
-			}},
+			-- highlight = {
+			-- 	groups = {
+			-- 		InclineNormal = {default=true,group='lualine_a_command'},
+			-- }},
 		},
 	},
 	{
 		'nvim-lualine/lualine.nvim',
-		cond = true,
+		cond = false,
 		lazy = false,
 		dependencies = {'nvim-tree/nvim-web-devicons', lazy = true},
 		opts = {
