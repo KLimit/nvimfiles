@@ -12,6 +12,7 @@ return {
 	{
 		-- filenames in upper-right corner of window
 		'b0o/incline.nvim',
+		cond = false,
 		lazy = false,
 		opts = {
 			render = function(props)
