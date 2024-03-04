@@ -45,7 +45,11 @@ colorschemes = {
 	{ 'everblush/nvim', name = 'everblush' },
 	{
 		'zootedb0t/citruszest.nvim',
-		config = {option = {transparent = true}}
+		config = {
+			option = {transparent = true},
+			-- #404040 is the "visual" color; don't want to load the palette
+			style = {ColorColumn={bg="#404040"}},
+		}
 	},
 	{ 'ishan9299/modus-theme-vim' },
 	{ 'cryptomilk/nightcity.nvim' },
