@@ -11,7 +11,7 @@ return {
 	{ 'nvim-tree/nvim-web-devicons' },
 	{
 		'nvim-lualine/lualine.nvim',
-		cond = false,
+		cond = true,
 		lazy = false,
 		dependencies = {'nvim-tree/nvim-web-devicons', lazy = true},
 		opts = {
@@ -19,58 +19,25 @@ return {
 				globalstatus = true,
 				theme = vim.g.colors_name,
 				-- the font Fairfax HD has Powerline symbols at a different code point
-				section_separators = { left = '󿂰', right = '󿂲' },
+				section_separators = { left = '', right = '░' },
 				component_separators = { left = '│', right = '│' },
 			},
 			sections = {
-				lualine_a = {
-					{
-						'mode',
-						fmt = function(str) return str:sub(1, 1) end,
-					},
+				lualine_a = { { 'mode', fmt = function(str) return str:sub(1, 1) end } },
+				lualine_b = {
 					{
 						'buffers',
 						mode = 4,
 						icons_enabled = false,
-						symbols = { modified = ' *', alternate_file = '#', directory = '🗁' }
+						symbols = { modified = ' +', alternate_file = '#', directory = '🗁' }
 					},
-				},
-				lualine_b = {
-					{
-						function()
-							local branch = vim.b.gitsigns_head
-							if branch then
-								return vim.b.gitsigns_head
-							else
-								return ''
-							end
-						end,
-						icon = '󿂠',
-					},
-					{
-						'diff',
-						source = function()
-							local gitsigns = vim.b.gitsigns_status_dict
-							if gitsigns then
-								return {
-									added = gitsigns.added,
-									modified = gitsigns.changed,
-									removed = gitsigns.removed,
-								}
-							end
-						end
-					},
-					'diagnostics',
 				},
 				lualine_c = {
-					{'aerial', dense = true,},
+					{'aerial', dense = true, colored = false},
 				},
 				lualine_x = {
 					'encoding',
-					{
-						'fileformat',
-						symbols = { unix = '␊', dos = '␍␊', mac = '␍' }
-					},
+					{ 'fileformat', symbols = { unix = '␊', dos = '␍␊', mac = '␍' } },
 					{'filetype', icons_enabled = false},
 				},
 				lualine_y = {
@@ -78,10 +45,6 @@ return {
 					'progress',
 				},
 				lualine_z = {
-					{
-						require('lazy.status').updates,
-						cond = require('lazy.status').has_updates,
-					},
 					function()
 						return os.date("%I:%M %p")
 					end,
