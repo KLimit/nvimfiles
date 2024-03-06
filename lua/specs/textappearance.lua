@@ -12,21 +12,6 @@ return {
 		cmd = 'ZenMode',
 	},
 	{
-		'lukas-reineke/indent-blankline.nvim',
-		cond = false,
-		lazy = false,
-		main = 'ibl',
-		opts = {
-			scope = {
-				enabled = true,
-				show_start = true,
-			},
-			whitespace = {
-				remove_blankline_trail = true,
-			},
-		}
-	},
-	{
 		'nyngwang/murmur.lua',
 		event = 'VeryLazy',
 		config = true,
