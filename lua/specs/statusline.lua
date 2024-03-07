@@ -45,13 +45,6 @@ return {
 		},
 	},
 	{
-		'freddiehaddad/feline.nvim',
-		config = true,
-		cond = false,
-		lazy = false,
-		-- event = 'VeryLazy',
-	},
-	{
 		-- filenames in upper-right corner of window
 		'b0o/incline.nvim',
 		cond = false,
