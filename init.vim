@@ -5,7 +5,6 @@ let g:mapleader = ','
 " NOTE: colors_name might not be a good variable name since it gets set by the
 " colorscheme when set (or is supposed to be set)
 let g:colors_name = 'citruszest'
-
 set termguicolors
 lua require('lazyplugins')
 lua require('maps')
@@ -33,8 +32,6 @@ if has('filetype')
 	filetype indent plugin on
 endif
 set autoindent
-" gui (possibly neovide-specific)
-set guifont=Fairfax\ Hax\ HD:h12
 
 lua require('guis')
 
@@ -48,7 +45,6 @@ if has('win32')
 	set shellquote=
 	set shellxquote=
 endif
-" ui/nav/function
 set belloff=all
 set number
 set relativenumber
@@ -68,10 +64,8 @@ set textwidth=80
 set termguicolors
 set cursorline
 set nocursorcolumn
-" statusline/tabline/winbar
 set laststatus=3
 set rulerformat=%4(%P%)
-" entry
 set tabstop=4
 set shiftwidth=0
 set softtabstop=-1

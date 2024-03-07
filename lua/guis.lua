@@ -1,3 +1,4 @@
+vim.opt.guifont = 'Fairfax Hax HD:h12'
 if vim.g.neovide then
 	-- vim.g.neovide_remember_window_size = v:true
 	vim.g.neovide_scale_factor=1.0
