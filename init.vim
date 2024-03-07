@@ -48,7 +48,7 @@ set iskeyword+=-
 set iskeyword+=_
 set laststatus=3
 set list
-set listchars+=trail:░
+set listchars+=trail:░,tab:│\ 
 set nocursorcolumn
 set noexpandtab
 set nohlsearch
