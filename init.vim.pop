@@ -1,0 +1,34 @@
+set termguicolors
+lua require('lazyplugins')
+lua require('maps')
+lua require('autocommands')
+lua require('commands')
+" lua require('config.statusline')
+execute 'colorscheme ' . g:colors_name
+" high-level operational stuff
+if has('persistent_undo')
+	set undofile
+endif
+if &modifiable
+	set fileencoding=utf-8
+endif
+if has('syntax')
+	syntax on
+endif
+if has('filetype')
+	filetype indent plugin on
+endif
+
+lua require('guis')
+
+if has('win32')
+	" shell
+	" more than just setting shell to pwsh -- see shell-powershell
+	let &shell = executable('pwsh') ? 'pwsh' : 'powershell'
+	let &shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;'
+	let &shellredir = '-RedirectStandardOutput %s -NoNewWindow -Wait'
+	let &shellpipe = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
+	set shellquote=
+	set shellxquote=
+endif
+" ui/nav/function
