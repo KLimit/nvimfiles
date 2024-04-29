@@ -60,4 +60,5 @@ return {
 		end,
 	},
 	{ 'sirtaj/vim-openscad' },
+	{'luisjure/csound-vim'},
 }
