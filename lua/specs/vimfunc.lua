@@ -25,6 +25,7 @@ return {
 		'numToStr/Comment.nvim',
 		event = 'VeryLazy',
 		config = true,
+		cond = false,
 	},
 	{
 		'folke/which-key.nvim',
