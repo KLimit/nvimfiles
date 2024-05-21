@@ -60,5 +60,12 @@ return {
 		end,
 	},
 	{ 'sirtaj/vim-openscad' },
-	{'luisjure/csound-vim'},
+	{
+		'luisjure/csound-vim',
+		ft = 'csd',
+	},
+	{
+		'hylang/vim-hy',
+		ft = 'hy',
+	},
 }
