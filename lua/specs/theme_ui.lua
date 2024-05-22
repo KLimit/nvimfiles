@@ -82,6 +82,7 @@ return {
 		'nvim-telescope/telescope.nvim',
 		dependencies = 'nvim-lua/plenary.nvim',
 		cmd = 'Telescope',
+		cond = false,
 	},
 	{
 		'echasnovski/mini.colors',
@@ -90,6 +91,7 @@ return {
 			require'mini.colors'.setup()
 		end,
 		cmd = 'Colorscheme',
+		cond = false,
 	},
 	{
 		'mawkler/modicator.nvim',
