@@ -2,17 +2,14 @@
 return {
 	{
 		'windwp/nvim-autopairs',
-		-- enabled = false,
+		cond = false,
 		event = 'VeryLazy',
-		config = function()
-			local autopairs = require'nvim-autopairs'
-			local Rule = require'nvim-autopairs.rule'
-			local cond = require'nvim-autopairs.conds'
-			autopairs.setup({
-					check_ts = true,
-					map_cr = true,
-			})
-		end,
+		opts = {
+			disable_filetype  = {'TelescopePrompt', 'hy'},
+			check_ts = true,
+			map_cr = true,
+			map_c_w = true,
+		},
 	},
 	{
 		'kylechui/nvim-surround',
