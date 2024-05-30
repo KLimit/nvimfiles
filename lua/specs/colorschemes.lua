@@ -51,6 +51,7 @@ colorschemes = {
 			style = {
 				ColorColumn = {bg = "#404040"},
 				PmenuSbar = {fg = "#232323"},
+				MatchParen = {reverse = true},
 			},
 			-- PmenuSbar
 		}
