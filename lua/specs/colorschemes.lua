@@ -66,6 +66,7 @@ colorschemes = {
 		}
 	},
 	{ 'lighthaus-theme/vim-lighthaus' },
+	{ 'slugbyte/lackluster.nvim' },
 }
 -- this is the scheme to use
 for i, scheme_ in ipairs(colorschemes) do
