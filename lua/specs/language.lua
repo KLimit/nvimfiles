@@ -3,6 +3,7 @@ local iswindows = require'lib.iswindows'
 return {
 	{
 		'chrisbra/csv.vim',
+		cond = false,
 		ft = 'csv',
 		init = function()
 			local api = vim.api
@@ -29,6 +30,11 @@ return {
 				command = "%UnArrangeColumn",
 			})
 		end,
+	},
+	{
+		'emmanueltouzery/decisive.nvim',
+		ft = 'csv',
+		setup = 'true',
 	},
 	{
 		'vim-scripts/indentpython.vim',
