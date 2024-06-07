@@ -16,6 +16,7 @@ return {
 		event = 'VeryLazy',
 		config = true,
 		opts = {
+			max_len = 0,
 			yank_blink = { on_yank = { higroup = 'IncSearch', timeout = 2000, }, },
 		},
 	},
