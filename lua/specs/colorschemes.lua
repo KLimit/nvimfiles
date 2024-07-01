@@ -69,8 +69,8 @@ colorschemes = {
 	{
 		'slugbyte/lackluster.nvim',
 		opts = {
-			tweek_syntax = {comment = 0x555555},
-			tweek_background = {normal = 'none'}
+			tweak_syntax = {comment = 0x555555},
+			tweak_background = {normal = 'none'}
 		}
 	},
 }
