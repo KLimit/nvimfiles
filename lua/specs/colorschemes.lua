@@ -66,7 +66,13 @@ colorschemes = {
 		}
 	},
 	{ 'lighthaus-theme/vim-lighthaus' },
-	{ 'slugbyte/lackluster.nvim' },
+	{
+		'slugbyte/lackluster.nvim',
+		opts = {
+			tweek_syntax = {comment = 0x555555},
+			tweek_background = {normal = 'none'}
+		}
+	},
 }
 -- this is the scheme to use
 for i, scheme_ in ipairs(colorschemes) do
