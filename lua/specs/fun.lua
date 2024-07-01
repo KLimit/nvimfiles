@@ -1,24 +1,6 @@
 -- games in neovim?
 return {
 	{
-		'rktjmp/shenzhen-solitaire.nvim',
-		config = function()
-			local Shenzhen = vim.api.nvim_create_augroup("Shenzhen", {clear = True})
-			vim.api.nvim_create_autocmd({'FileType'}, {
-				group = Shenzhen,
-				pattern = "shenzhen-solitaire",
-				callback = function()
-					vim.cmd('IndentBlanklineDisable')
-					vim.opt_local.colorcolumn = ''
-					vim.keymap.set('n', ']]', ':ShenzhenSolitaireNewGame<CR>')
-					vim.cmd('NoNeckPain')
-				end
-				-- command = "IndentBlanklineDisable",
-			})
-		end,
-		cmd = {'ShenzhenSolitaireNewGame', 'ShenzhenSolitaireNextGame'}
-	},
-	{
 		'tamton-aquib/zone.nvim',
 		enabled = false,
 		config = function()
