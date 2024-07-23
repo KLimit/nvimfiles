@@ -73,6 +73,8 @@ colorschemes = {
 			tweak_background = {normal = 'none'}
 		}
 	},
+	{'2giosangmitom/nightfall.nvim'},
+	{'NTBBloodbath/sweetie.nvim'},
 }
 -- this is the scheme to use
 for i, scheme_ in ipairs(colorschemes) do
