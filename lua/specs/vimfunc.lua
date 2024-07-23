@@ -109,8 +109,7 @@ return {
 			},
 		},
 		keys = {
-			{'<leader>j', function() require('treesj').join() end},
-			{'<leader>s', function() require('treesj').split() end},
+			{'<leader>s', function() require('treesj').toggle() end},
 		},
 		cmd = {'TSJToggle', 'TSJSplit', 'TSJJoin'},
 	},
