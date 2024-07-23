@@ -3,7 +3,7 @@
 return {
 	{
 		'nvim-lualine/lualine.nvim',
-		cond = true,
+		cond = false,
 		lazy = false,
 		dependencies = {'nvim-tree/nvim-web-devicons', lazy = true},
 		opts = {

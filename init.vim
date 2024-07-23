@@ -15,6 +15,7 @@ if has('nvim')
 	lua require('autocommands')
 	lua require('commands')
 	lua require('guis')
+	lua require('config.statusline')
 	" lua require('config.statusline')
 endif
 " set colorscheme after colorscheme plugins are loaded
