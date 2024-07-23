@@ -20,6 +20,7 @@ return {
 	},
 	{
 		'tamton-aquib/duck.nvim',
+		enabled = false,
 		opts = {},
 	},
 	{
@@ -56,5 +57,11 @@ return {
 	{
 		'rktjmp/playtime.nvim',
 		cmd = 'Playtime',
+		config = function()
+			require'playtime'.setup{}
+			local set_hl = vim.api.nvim_set_hl
+			set_hl(0, '@playtime.game.card.diamonds', {link='@playtime.game.card.diamonds.four_colors'})
+			set_hl(0, '@playtime.game.card.clubs', {link='@playtime.game.card.clubs.four_colors'})
+		end
 	}
 }
