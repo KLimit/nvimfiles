@@ -12,6 +12,7 @@ local commands = {
 	{'PagerEnable', pager.enable, {}},
 	{'PagerDisable', pager.disable, {}},
 	{'PagerToggle', pager.toggle, {}},
+	{'DrawingToggle', require'config.drawing'.toggle, {}},
 }
 for i, args in ipairs(commands) do
 	api.nvim_create_user_command(unpack(args))
