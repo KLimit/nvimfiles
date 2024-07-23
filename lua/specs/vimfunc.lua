@@ -211,5 +211,6 @@ return {
 		dependencies = 'nvim-lua/plenary.nvim',
 		opts = { keymap = { commit = nil } },
 		cmd = 'Tardis',
-	}
+	},
+	{'einfachtoll/didyoumean', lazy=false},
 }
