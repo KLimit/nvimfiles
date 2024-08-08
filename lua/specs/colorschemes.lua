@@ -66,8 +66,9 @@ colorschemes = {
 		}
 	},
 	{ 'lighthaus-theme/vim-lighthaus' },
-	{'2giosangmitom/nightfall.nvim'},
+	-- {'2giosangmitom/nightfall.nvim'},
 	{'NTBBloodbath/sweetie.nvim'},
+	{'0xstepit/flow.nvim'},
 }
 -- this is the scheme to use
 for i, scheme_ in ipairs(colorschemes) do
