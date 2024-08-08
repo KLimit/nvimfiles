@@ -21,6 +21,10 @@ function M.pyscript(exargs)
 	local mainargs = {
 		'def mainargs(argv=None):',
 		'    pser = argparse.ArgumentParser()',
+		'    for args, kwargs in [',
+		'        ([], dict()),',
+		'    ]:',
+		'        pser.add_argument(*args, **kwargs)',
 		'    args = pser.parse_args(argv)',
 		'    return vars(args)',
 	}
