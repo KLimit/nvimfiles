@@ -66,13 +66,6 @@ colorschemes = {
 		}
 	},
 	{ 'lighthaus-theme/vim-lighthaus' },
-	{
-		'slugbyte/lackluster.nvim',
-		opts = {
-			tweak_syntax = {comment = 0x555555},
-			tweak_background = {normal = 'none'}
-		}
-	},
 	{'2giosangmitom/nightfall.nvim'},
 	{'NTBBloodbath/sweetie.nvim'},
 }
