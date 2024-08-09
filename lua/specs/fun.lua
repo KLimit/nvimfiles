@@ -50,11 +50,6 @@ return {
 		config = true,
 	},
 	{
-		'NStefan002/2048.nvim',
-		cmd = 'Play2048',
-		config = true,
-	},
-	{
 		'rktjmp/playtime.nvim',
 		cmd = 'Playtime',
 		config = function()
@@ -81,7 +76,6 @@ return {
 					PlaytimeMagenta = colors.purple,
 					PlaytimeCyan = colors.cyan,
 				} do
-					print(group, fg)
 					set_hl(0, group, {fg=fg})
 				end
 			end)
