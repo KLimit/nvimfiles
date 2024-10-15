@@ -47,7 +47,7 @@ set inccommand=nosplit
 set incsearch
 set iskeyword+=-
 set iskeyword+=_
-set laststatus=3
+set laststatus=2
 set list
 set listchars+=trail:░,tab:│\ 
 set nocursorcolumn

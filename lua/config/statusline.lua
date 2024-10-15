@@ -1,6 +1,6 @@
 local opt = vim.opt
 
-local left = '%2{mode()} | %n %f%([%M%R%H%W]%)'
+local left = '%2{mode()} | b%nw%{winnr()} %f%([%M%R%H%W]%)'
 local right = '%y | %l:%c (%p%%)'
 opt.statusline = left .. '%=' .. right .. ' '
 
