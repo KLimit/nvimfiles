@@ -8,3 +8,4 @@ vim.g.python_indent = {
 	nested_paren = 'shiftwidth()',
 	continue = 'shiftwidth()',
 }
+vim.bo.makeprg = 'pyflakes %:S'
