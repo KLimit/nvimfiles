@@ -2,39 +2,15 @@
 local iswindows = require'lib.iswindows'
 return {
 	{
-		'chrisbra/csv.vim',
+		'emmanueltouzery/decisive.nvim',
 		cond = false,
 		ft = 'csv',
-		init = function()
-			local api = vim.api
-			local g = vim.g
-			g.csv_no_conceal = nil
-			g.csv_highlight_column = nil
-			g.csv_hiGroup = 'TabLineFill'
-			for group, tolink in pairs{
-				CSVColumnOdd = 'Normal',
-				CSVColumnEven = 'Character',
-				CSVDelimiter = 'Comment',
-			} do
-				api.nvim_set_hl(0, group, {link=tolink})
-			end
-			local csvarrange = api.nvim_create_augroup('CSVArrange', {clear=true})
-			api.nvim_create_autocmd({'BufRead', 'BufWritePost'}, {
-				group = csvarrange,
-				pattern = '*.csv',
-				command = "%ArrangeColumn",
-			})
-			api.nvim_create_autocmd({'BufWritePre'}, {
-				group = csvarrange,
-				pattern = '*.csv',
-				command = "%UnArrangeColumn",
-			})
-		end,
+		setup = 'true',
 	},
 	{
-		'emmanueltouzery/decisive.nvim',
+		'hat0uma/csvview.nvim',
 		ft = 'csv',
-		setup = 'true',
+		config = true,
 	},
 	{
 		'vim-scripts/indentpython.vim',
