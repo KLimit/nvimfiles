@@ -70,16 +70,17 @@ colorschemes = {
 	{'NTBBloodbath/sweetie.nvim'},
 	{'0xstepit/flow.nvim'},
 }
--- this is the scheme to use
+-- lazy.nvim recommends high priority for color schemes to load them early
+-- but only do so for the chosen scheme
+local selected = vim.g.colors_name
 for i, scheme_ in ipairs(colorschemes) do
-	-- lazy.nvim recommends high priority for color schemes to load them early
-	scheme_.lazy = true
-	scheme_.event = 'VeryLazy'
-	if scheme_.name == vim.g.colors_name then
-		-- TODO: come up with a way to to set the colorscheme from here so that you
-		-- don't have this as yet another instance of the string "eva01", etc.
+	-- scheme_.lazy = true
+	-- scheme_.event = 'VeryLazy'
+	local altname = scheme_[1] or scheme_.url
+	if scheme_.name == selected or string.find(altname, selected) then
 		scheme_.priority = 1000
 		scheme_.lazy = false
+		return {scheme_}
 	end
 end
-return colorschemes
+-- return colorschemes
