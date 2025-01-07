@@ -28,9 +28,6 @@ return {
 					'vim',
 					'vimdoc',
 				},
-				indent = {
-					enable = true,
-				},
 				highlight = {
 					enable = true,
 					disable = {'gitcommit'},
