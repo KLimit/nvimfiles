@@ -15,6 +15,7 @@ return {
 	{
 		'vim-scripts/indentpython.vim',
 		ft = 'python',
+		cond = false,
 	},
 	{
 		'vim-scripts/Windows-Powershell-Syntax-Plugin',
