@@ -79,11 +79,6 @@ return {
 		cmd = 'Sort',
 	},
 	{
-		'abecodes/tabout.nvim',
-		opts = { },
-		event = 'VeryLazy',
-	},
-	{
 		'sindrets/winshift.nvim',
 		opts = {},
 		cmd = 'WinShift',
@@ -116,5 +111,5 @@ return {
 		opts = { keymap = { commit = nil } },
 		cmd = 'Tardis',
 	},
-	{'einfachtoll/didyoumean', lazy=false},
+	{'einfachtoll/didyoumean', cond = false, lazy = false},
 }
