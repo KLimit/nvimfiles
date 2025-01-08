@@ -39,7 +39,7 @@ return {
 					lint_events = {"BufWrite", "CursorHold"},
 				},
 				textobjects = {
-					enable = true,
+					enable = false,
 					select = {
 						enable = true,
 						lookahead = true,
@@ -59,6 +59,7 @@ return {
 	},
 	{
 		'nvim-treesitter/nvim-treesitter-context',
+		cond = false,
 		lazy = false,
 		event = 'VeryLazy',
 		opts = {
@@ -69,6 +70,7 @@ return {
 	},
 	{
 		'nvim-treesitter/nvim-treesitter-textobjects',
+		cond = false,
 		lazy = false,
 		-- TODO: make all relevant plugins after nvim-treesitter like in colorscheme
 		after = 'nvim-treesitter',

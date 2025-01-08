@@ -41,6 +41,7 @@ return {
 	{
 		'folke/todo-comments.nvim',
 		dev = true,
+		cond = false,
 		event = 'VeryLazy',
 		opts = {
 			signs = false,
@@ -67,6 +68,7 @@ return {
 	-- INFO:
 	{
 		'tzachar/highlight-undo.nvim',
+		cond = false,
 		opts = {
 			hlgroup = 'HighlightUndo',
 			duration = 300,

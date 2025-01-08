@@ -66,6 +66,7 @@ return {
 	},
 	{
 		'smoka7/hop.nvim',
+		enabled = false,
 		event = 'VeryLazy',
 		opts = {uppercase_labels = true,},
 		keys = {
