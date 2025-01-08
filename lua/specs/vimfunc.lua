@@ -36,35 +36,11 @@ return {
 		cmd = 'JABSOpen',
 	},
 	{
-		'chrisgrieser/nvim-various-textobjs',
-		enabled = false,
-		event = 'VeryLazy',
-		opts = {useDefaultKeymaps = true},
-	},
-	{
 		'Tummetott/reticle.nvim',
 		event = 'VeryLazy',
 		opts = {
 			always_highlight_number = true,
 		},
-	},
-	{
-		'Wansmer/treesj',
-		dependencies = {'nvim-treesitter/nvim-treesitter'},
-		opts = {
-			use_default_keymaps = false,
-			langs = {
-				python = {
-					pattern_list = {split = {last_separator = true}},
-					argument_list = {split = {last_separator = true}},
-					parameters = {split = {last_separator = true}},
-				},
-			},
-		},
-		keys = {
-			{'<leader>s', function() require('treesj').toggle() end},
-		},
-		cmd = {'TSJToggle', 'TSJSplit', 'TSJJoin'},
 	},
 	{
 		'vim-scripts/ScrollColors',
@@ -124,12 +100,6 @@ return {
 			},
 			fastwarp = {enable = false},
 		},
-	},
-	{
-		'chrisgrieser/nvim-puppeteer',
-		dependencies = 'nvim-treesitter/nvim-treesitter',
-		cond = false,
-		lazy = false,  -- apparently, the plugin lazy-loads itself
 	},
 	{
 		'jbyuki/venn.nvim',

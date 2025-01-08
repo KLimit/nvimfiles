@@ -73,5 +73,29 @@ return {
 		-- TODO: make all relevant plugins after nvim-treesitter like in colorscheme
 		after = 'nvim-treesitter',
 		requires = 'nvim-treesitter/nvim-treesitter',
-	}
+	},
+	{
+		'Wansmer/treesj',
+		dependencies = {'nvim-treesitter/nvim-treesitter'},
+		opts = {
+			use_default_keymaps = false,
+			langs = {
+				python = {
+					pattern_list = {split = {last_separator = true}},
+					argument_list = {split = {last_separator = true}},
+					parameters = {split = {last_separator = true}},
+				},
+			},
+		},
+		keys = {
+			{'<leader>s', function() require('treesj').toggle() end},
+		},
+		cmd = {'TSJToggle', 'TSJSplit', 'TSJJoin'},
+	},
+	{
+		'chrisgrieser/nvim-puppeteer',
+		dependencies = 'nvim-treesitter/nvim-treesitter',
+		cond = false,
+		lazy = false,  -- apparently, the plugin lazy-loads itself
+	},
 }
