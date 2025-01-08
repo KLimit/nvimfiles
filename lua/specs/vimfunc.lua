@@ -19,24 +19,6 @@ return {
 		config = true,
 	},
 	{
-		'numToStr/Comment.nvim',
-		event = 'VeryLazy',
-		config = true,
-		cond = false,
-	},
-	{
-		'folke/which-key.nvim',
-		event = 'VeryLazy',
-		config = true,
-		enabled = false,
-	},
-	{
-		'chentoast/marks.nvim',
-		enabled = false,
-		event = 'VeryLazy',
-		config = true,
-	},
-	{
 		'rmagatti/alternate-toggler',
 		event = 'VeryLazy',
 		opts = {
@@ -58,35 +40,6 @@ return {
 		enabled = false,
 		event = 'VeryLazy',
 		opts = {useDefaultKeymaps = true},
-	},
-	{
-		'ibhagwan/smartyank.nvim',
-		enabled = false,
-		event = 'VeryLazy',
-		opts = {
-			clipboard = {enabled = false},
-			tmux = {enabled = false},
-		},
-	},
-	{
-		'mrjones2014/smart-splits.nvim',
-		enabled = false,
-		event = 'VeryLazy',
-		opts = {
-			ignored_filetypes = {
-				'nofile',
-				'quickfix',
-				'prompt',
-				'no-neck-pain',
-			},
-			cursor_follows_swapped_bufs = true,
-		},
-		keys = {
-			{'<C-w>H', function() require'smart-splits'.swap_buf_left() end},
-			{'<C-w>J', function() require'smart-splits'.swap_buf_down() end},
-			{'<C-w>K', function() require'smart-splits'.swap_buf_up() end},
-			{'<C-w>L', function() require'smart-splits'.swap_buf_right() end},
-		},
 	},
 	{
 		'Tummetott/reticle.nvim',
@@ -147,25 +100,6 @@ return {
 		'sQVe/sort.nvim',
 		config = true,
 		cmd = 'Sort',
-	},
-	{
-		'chrisgrieser/nvim-early-retirement',
-		config = true,
-		event = 'VeryLazy',
-		opts = { notificationOnAutoClose = true, }
-	},
-	{
-		'nmac427/guess-indent.nvim',
-		opts = {
-			auto_cmd = false,
-		},
-		cmd = 'GuessIndent',
-	},
-	{
-		'darazaki/indent-o-matic',
-		enabled = false,
-		config = true,
-		cmd = 'IndentOMatic',
 	},
 	{
 		'abecodes/tabout.nvim',

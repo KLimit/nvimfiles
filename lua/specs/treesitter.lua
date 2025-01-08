@@ -68,14 +68,6 @@ return {
 		}
 	},
 	{
-		'nvim-treesitter/playground',
-		cmd = {
-			'TSPlaygroundToggle',
-			'TSNodeUnderCursor',
-			'TSHighlightCapturesUnderCursor',
-		},
-	},
-	{
 		'nvim-treesitter/nvim-treesitter-textobjects',
 		lazy = false,
 		-- TODO: make all relevant plugins after nvim-treesitter like in colorscheme
