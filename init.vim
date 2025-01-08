@@ -4,7 +4,8 @@ let g:mapleader = ','
 " set a global colorscheme variable for lazy to use
 " NOTE: colors_name might not be a good variable name since it gets set by the
 " colorscheme when set (or is supposed to be set)
-let g:colors_name = 'flow'
+let g:colors_name = 'ashen'
+let g:load_all_colors = v:false
 let g:loaded_ruby_provider = 0
 let g:loaded_node_provider = 0
 let g:netrw_banner = 0

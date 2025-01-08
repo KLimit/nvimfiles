@@ -56,7 +56,6 @@ colorschemes = {
 			-- PmenuSbar
 		}
 	},
-	{ 'ishan9299/modus-theme-vim' },
 	{ 'cryptomilk/nightcity.nvim' },
 	{
 		'scottmckendry/cyberdream.nvim',
@@ -69,6 +68,9 @@ colorschemes = {
 	-- {'2giosangmitom/nightfall.nvim'},
 	{'NTBBloodbath/sweetie.nvim'},
 	{'0xstepit/flow.nvim'},
+	{'killitar/obscure.nvim'},
+	{'ficcdaf/ashen.nvim'},
+	{'slugbyte/lackluster.nvim'},
 }
 -- lazy.nvim recommends high priority for color schemes to load them early
 -- but only do so for the chosen scheme
@@ -80,7 +82,9 @@ for i, scheme_ in ipairs(colorschemes) do
 	if scheme_.name == selected or string.find(altname, selected) then
 		scheme_.priority = 1000
 		scheme_.lazy = false
-		return {scheme_}
+		if not vim.g.load_all_colors then
+			return {scheme_}
+		end
 	end
 end
--- return colorschemes
+return colorschemes
