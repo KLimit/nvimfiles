@@ -1,17 +1,6 @@
 -- plugins that extend neovim features or provide vim-like functionality
 return {
 	{
-		'windwp/nvim-autopairs',
-		cond = false,
-		event = 'VeryLazy',
-		opts = {
-			disable_filetype  = {'TelescopePrompt', 'hy'},
-			check_ts = true,
-			map_cr = true,
-			map_c_w = true,
-		},
-	},
-	{
 		'kylechui/nvim-surround',
 		version = '*',
 		event = 'VeryLazy',
