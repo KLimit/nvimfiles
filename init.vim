@@ -11,13 +11,7 @@ let g:loaded_node_provider = 0
 let g:netrw_banner = 0
 set termguicolors  " not sure if this needs to be before loading plugins
 if has('nvim')
-	lua require('lazyplugins')
-	lua require('maps')
-	lua require('autocommands')
-	lua require('commands')
-	lua require('guis')
-	lua require('config.statusline')
-	" lua require('config.statusline')
+	lua require('init')
 endif
 " set colorscheme after colorscheme plugins are loaded
 execute 'colorscheme ' . g:colors_name
