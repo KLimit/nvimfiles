@@ -56,7 +56,7 @@ set noexpandtab
 set nohlsearch
 set nosmarttab
 set nowrap
-set number
+set nonumber
 set numberwidth=3
 set relativenumber
 set rulerformat=%4(%P%)

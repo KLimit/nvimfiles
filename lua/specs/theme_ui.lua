@@ -60,6 +60,7 @@ return {
 	{
 		'cpea2506/relative-toggle.nvim',
 		event = 'VeryLazy',
+		cond = false,
 	},
 	{
 		'm4xshen/smartcolumn.nvim',
