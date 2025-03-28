@@ -1,26 +1,5 @@
-local M = {}
--- TODO: make a factory to do make these shortcuts
--- To do this you need to know Lua getattr-type thing
-function M.map(mode, lhs, rhs, opts)
-	opts = opts or {}
-	vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
-end
-function M.del_map(mode, lhs)
-	opts = opts or {}
-	vim.api.nvim_del_keymap(mode, lhs)
-end
-function M.bmap(mode, lhs, rhs, opts)
-	-- buffer-local map
-	opts = opts or {}
-	vim.api.nvim_buf_set_keymap(0, mode, lhs, rhs, opts)
-end
-function M.del_bmap(mode, lhs)
-	-- buffer-local unmap
-	vim.api.nvim_buf_del_keymap(0, mode, lhs)
-end
-
-local map = M.map
-local unmap = M.del_map
+local map = require'lib.mapping'.map
+local unmap = require'lib.mapping'.del_map
 
 vim.g.mapleader = ','
 
@@ -51,5 +30,3 @@ map('n', '<leader>r', '', {callback = require'funcs.makereturn'.toggle})
 
 -- too lazy to learn how to use maps well
 -- unmap('n', 'm')
-
-return M

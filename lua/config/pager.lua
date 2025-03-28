@@ -3,8 +3,8 @@
 
 local api = vim.api
 local opt = vim.opt_local
-local map = require('maps').bmap
-local unmap = require('maps').del_bmap
+local map = require('lib.mapping').bmap
+local unmap = require('lib.mapping').del_bmap
 
 local M = {}
 
