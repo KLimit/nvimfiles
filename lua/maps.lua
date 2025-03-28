@@ -27,6 +27,8 @@ map('n', ';;', ':')
 map('n', ';l', ':lua ')
 -- since these aren't plugins, we don't need to wrap them in an anonymous
 map('n', '<leader>r', '', {callback = require'funcs.makereturn'.toggle})
+-- map('n', '<leader>w', 'xph')
+map('n', '<leader>w', '', {callback = require'funcs.swapchar'})
 
 -- too lazy to learn how to use maps well
 -- unmap('n', 'm')
