@@ -110,10 +110,10 @@ function! GetPythonIndent(lnum)
     let thisline = getline(a:lnum)
     let thisindent = indent(a:lnum)
 
-	" If line is a comment, keep the same indentation
-	if thisline =~ '^s*#'
-		return -1
-	endif
+    " If line is a comment, keep the same indentation
+    if thisline =~ '^\s*#'
+        return -1
+    endif
 
     " If we can find an open parenthesis/bracket/brace, line up with it.
     call cursor(a:lnum, 1)
