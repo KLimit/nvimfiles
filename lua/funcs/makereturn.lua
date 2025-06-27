@@ -15,7 +15,7 @@ local return_string = 'return '
 -- substitute pat for sub on current line
 local function sub_current_line(pat, sub)
 	local line = api.nvim_get_current_line()
-	local subbed = string.gsub(line, pat, sub)
+	local subbed = string.gsub(line, pat, sub, 1)
 	if line ~= subbed then
 		api.nvim_set_current_line(subbed)
 	end
