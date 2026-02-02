@@ -37,7 +37,7 @@ set belloff=all
 set colorcolumn=80
 set cursorline
 set foldexpr=v:lua.vim.treesitter.foldexpr()
-set foldlevel=1
+set foldlevel=999
 set foldmethod=expr
 set formatoptions+=tcqn
 set ignorecase
